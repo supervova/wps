@@ -1,0 +1,209 @@
+{
+  "name": "whatpoliticssay",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-recommended-scss"
+    ],
+    "rules": {
+      "at-rule-empty-line-before": null,
+      "at-rule-no-vendor-prefix": true,
+      "color-named": "never",
+      "declaration-empty-line-before": null,
+      "declaration-no-important": true,
+      "font-family-name-quotes": "always-where-recommended",
+      "font-weight-notation": [
+        "numeric",
+        {
+          "ignore": [
+            "relative"
+          ]
+        }
+      ],
+      "function-url-no-scheme-relative": true,
+      "function-url-quotes": "always",
+      "length-zero-no-unit": true,
+      "media-feature-name-no-vendor-prefix": true,
+      "no-descending-specificity": null,
+      "no-duplicate-selectors": true,
+      "no-empty-source": null,
+      "media-feature-name-no-unknown": [
+        true,
+        {
+          "ignoreMediaFeatureNames": [
+            "prefers-reduced-motion"
+          ]
+        }
+      ],
+      "property-no-vendor-prefix": true,
+      "rule-empty-line-before": null,
+      "scss/dollar-variable-default": null,
+      "selector-attribute-quotes": "always",
+      "selector-class-pattern": [
+        "^[a-z0-9-_\\/:]+$",
+        {
+          "message": "Class names should only contain lowercase letters, numbers, hyphens, underscores (for BEM elements only), and may include forward slashes for fractions and colons."
+        }
+      ],
+      "selector-max-attribute": 2,
+      "selector-max-class": 4,
+      "selector-max-combinators": 4,
+      "selector-max-compound-selectors": 4,
+      "selector-max-id": 0,
+      "selector-max-specificity": null,
+      "selector-max-type": 2,
+      "selector-max-universal": 1,
+      "selector-no-qualifying-type": null,
+      "selector-no-vendor-prefix": true,
+      "value-keyword-case": [
+        "lower",
+        {
+          "camelCaseSvgKeywords": true,
+          "ignoreKeywords": [
+            "BlinkMacSystemFont",
+            "Roboto",
+            "Arial",
+            "Inter",
+            "Baskerville",
+            "Times",
+            "SFMono-Regular",
+            "Menlo",
+            "Monaco",
+            "Consolas"
+          ]
+        }
+      ],
+      "value-no-vendor-prefix": true
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "airbnb-base",
+      "plugin:prettier/recommended"
+    ],
+    "globals": {
+      "wp": true
+    },
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "node": true,
+      "jquery": true
+    },
+    "plugins": [
+      "eslint-plugin-prettier",
+      "import"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2021,
+      "sourceType": "module"
+    },
+    "settings": {
+      "import/core-modules": [],
+      "import/ignore": [
+        "node_modules",
+        "\\.(coffee|scss|css|less|hbs|svg|json)$"
+      ]
+    },
+    "rules": {
+      "import/no-extraneous-dependencies": "off",
+      "max-len": [
+        "error",
+        {
+          "ignoreComments": true,
+          "ignoreStrings": true,
+          "ignoreTemplateLiterals": true
+        }
+      ],
+      "no-multi-spaces": [
+        "error",
+        {
+          "exceptions": {
+            "BinaryExpression": true,
+            "VariableDeclarator": true
+          }
+        }
+      ],
+      "no-plusplus": [
+        2,
+        {
+          "allowForLoopAfterthoughts": true
+        }
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ]
+    }
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "endOfLine": "auto",
+    "jsxSingleQuote": false,
+    "printWidth": 80,
+    "quoteProps": "as-needed",
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "overrides": [
+      {
+        "files": [
+          "*.html"
+        ],
+        "options": {
+          "printWidth": 40000,
+          "bracketSameLine": true
+        }
+      }
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "postcss": {
+    "map": false,
+    "plugins": {
+      "postcss-preset-env": {
+        "stage": 2,
+        "features": {
+          "cascade-layers": false,
+          "custom-media-queries": true,
+          "custom-properties": false,
+          "custom-selectors": true,
+          "has-pseudo-class": true,
+          "image-set-function": true,
+          "is-pseudo-class": false,
+          "logical-properties-and-values": false,
+          "media-query-ranges": true,
+          "nesting-rules": true,
+          "unset-value": true
+        },
+        "autoprefixer": {
+          "cascade": false
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "postcss": "^8.4.39",
+    "postcss-preset-env": "^9.6.0",
+    "sass": "^1.77.8",
+    "vite": "^5.3.1",
+    "vite-plugin-imagemin": "^0.6.1"
+  }
+}

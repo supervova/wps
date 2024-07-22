@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Politics Say — Search for the Truth</title>
+    <link rel="stylesheet" href="/src/global.scss">
+    <link rel="stylesheet" href="/src/components/popover/popover.scss">
+
+  </head>
+  <body>
+    <header class="header">
+
+      <div class="filters">
+        <!-- Politicians -->
+        <details class="popover">
+          <summary>
+            Persons: <span class="value">all</span>
+            <span class="material-symbols-outlined is-base">
+              stat_minus_1
+            </span>
+          </summary>
+          <div class="popover__body">
+
+            <input id="filter-search" type="search" name="search" autocorrect="off" autocapitalize="off" autocomplete="off" aria-label="Find a politician" placeholder="Search">
+            <ul class="popover__content">
+              <li class="person is-all">
+                <label for="filter-all">All</label>
+                <input id="filter-all" type="checkbox" name="all" checked>
+              </li>
+              <li class="person is-democrat">
+                <figure>
+                  <figure class="person__avatar">
+                    <img src="/src/assets/images/persons/biden.png" srcset="/src/assets/images/persons/biden.png 1x, /src/assets/images/persons/biden@2x.png 2x" width="56" height="64" alt="Joe Biden">
+                  </figure>
+                  <figcaption>
+                    Joe Biden <small>Democrat</small>
+                  </figcaption>
+                </figure>
+                <input id="filter-biden" type="checkbox" name="biden" checked>
+              </li>
+              <li class="person is-republican">
+                <figure>
+                  <figure class="person__avatar">
+                    <img src="/src/assets/images/persons/trump.png" srcset="/src/assets/images/persons/trump.png 1x, /src/assets/images/persons/trump@2x.png 2x" width="56" height="64" alt="Donald Trump">
+                  </figure>
+                  <figcaption>
+                    Donald Trump <small>Republican</small>
+                  </figcaption>
+                </figure>
+                <input id="filter-trump" type="checkbox" name="biden" checked>
+              </li>
+              <li class="person is-democrat">
+                <figure>
+                  <figure class="person__avatar">
+                    <img src="/src/assets/images/persons/ocasio-cortez.png" srcset="/src/assets/images/persons/ocasio-cortez.png 1x, /src/assets/images/persons/ocasio-cortez@2x.png 2x" width="56" height="64" alt="Alexandria Ocasio-Cortez">
+                  </figure>
+                  <figcaption>
+                    Alexandria Ocasio-Cortez <small>Democrat</small>
+                  </figcaption>
+                </figure>
+                <input id="filter-ocasio-cortez" type="checkbox" name="biden" checked>
+              </li>
+              <li class="person is-republican">
+                <figure>
+                  <figure class="person__avatar">
+                    <img src="/src/assets/images/persons/vance.png" srcset="/src/assets/images/persons/vance.png 1x, /src/assets/images/persons/vance@2x.png 2x" width="56" height="64" alt="J.D. Vance">
+                  </figure>
+                  <figcaption>
+                    J.D. Vance <small>Republican</small>
+                  </figcaption>
+                </figure>
+                <input id="filter-vance" type="checkbox" name="biden" checked>
+              </li>
+              <li class="person is-democrat">
+                <figure>
+                  <figure class="person__avatar">
+                    <img src="/src/assets/images/persons/harris.png" srcset="/src/assets/images/persons/harris.png 1x, /src/assets/images/persons/harris@2x.png 2x" width="56" height="64" alt="Kamala Harris">
+                  </figure>
+                  <figcaption>
+                    Kamala Harris <small>Democrat</small>
+                  </figcaption>
+                </figure>
+                <input id="filter-harris" type="checkbox" name="biden" checked>
+              </li>
+              <li class="person is-republican">
+                <figure>
+                  <figure class="person__avatar">
+                    <img src="/src/assets/images/persons/rubio.png" srcset="/src/assets/images/persons/rubio.png 1x, /src/assets/images/persons/rubio@2x.png 2x" width="56" height="64" alt="Marco Rubio">
+                  </figure>
+                  <figcaption>
+                    Marco Rubio <small>Republican</small>
+                  </figcaption>
+                </figure>
+                <input id="filter-rubio" type="checkbox" name="biden" checked>
+              </li>
+            </ul>
+            <footer class="popover__footer">
+              <button class="btn is-ghost" role="submit">
+                Apply
+              </button>
+            </footer>
+          </div>
+        </details>
+
+        <!-- Period -->
+        <details class="popover is-period">
+          <summary>
+            Time: <span class="value">any</span>
+            <span class="material-symbols-outlined is-base">
+              stat_minus_1
+            </span>
+          </summary>
+          <div class="popover__body">
+            <div class="popover__content">
+              <p class="form-field">
+                <label for="filter-start-date">from</label>
+                <input id="filter-start-date" type="text" name="start-date" value="01.01.1970" autocomplete="off">
+              </p>
+              <p class="form-field">
+                <label for="filter-end-date">to</label>
+                <input id="filter-end-date" type="text" name="end-date" value="17.07.2024" autocomplete="off">
+              </p>
+              <div class="slider">
+                <input class="slider__base" id="filter-period-start" type="range" min="0" max="100" value="0" aria-label="Start Date" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <input class="slider__base" id="filter-period-end" type="range" min="0" max="100" value="100" aria-label="End Date" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
+
+    </header>
+
+    <div class="video-player-container"></div>
+
+    <footer class="search-ui-container">
+      <details class="popover is-up is-right">
+        <summary class="btn is-icon">
+          <span class="material-symbols-outlined">
+            more_horiz
+          </span>
+          <span class="visually-hidden">More</span>
+        </summary>
+        <div class="popover__body">
+          <ul class="popover__content menu">
+            <li>
+              <a class="menu__item" href="javascript:void(0)">
+                <span class="material-symbols-outlined is-base">
+                  keyboard
+                </span>
+                Keyboard Shortcut
+              </a>
+            </li>
+            <li>
+              <a class="menu__item" href="javascript:void(0)">
+                <span class="material-symbols-outlined is-base">
+                  settings
+                </span>
+                Settings
+              </a>
+            </li>
+          </ul>
+        </div>
+      </details>
+    </footer>
+    <script src="/src/main.js" type="module"></script>
+  </body>
+</html>
