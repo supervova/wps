@@ -1,21 +1,5 @@
 @use 'sass:math';
-// @import '../slider/slider';
-
-// -----------------------------------------------------------------------------
-// MOBILE DRAWER
-// -----------------------------------------------------------------------------
-// #region
-// #endregion
-
-.popover:not([open]) .popover__body {
-  display: block !important; /* Ensure the content is always visible */
-  height: auto;
-}
-
-
-details > *:not(summary) {
-  display: block;
-}
+@import '../slider/slider';
 
 // -----------------------------------------------------------------------------
 // BASE
@@ -41,46 +25,43 @@ details > *:not(summary) {
 // BODY
 
 .popover__body {
-  @media only screen and (min-width: 1961px) {
-    background-color: var(--popover-body-background);
-    backdrop-filter: var(--backdrop-filter-blur-lg);
-    border-radius: var(--popover-body-border-radius);
-    border: var(--popover-body-border);
-    box-shadow: var(--popover-body-box-shadow);
-    color: var(--popover-body-color);
-    display: flex;
-    list-style: none;
-    flex-direction: column;
-    text-align: left;
-    margin: var(--size-1p5) 0 0;
-    padding-block: var(--size-2);
-    padding-inline-start: calc(var(--padding-x-box) - var(--size-half));
-    padding-inline-end: calc(var(--padding-x-box) / 3);
-    position: absolute;
-    top: auto;
-    left: 0;
-    width: var(--popover-body-width);
-    max-height: 72vh;
-    max-height: 72dvh;
-    z-index: var(--zindex-popover);
+  background-color: var(--popover-body-background);
+  backdrop-filter: var(--backdrop-filter-blur-lg);
+  border-radius: var(--popover-body-border-radius);
+  border: var(--popover-body-border);
+  box-shadow: var(--popover-body-box-shadow);
+  color: var(--popover-body-color);
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  text-align: left;
+  margin: var(--size-1p5) 0 0;
+  padding-block: var(--size-2);
+  padding-inline-start: calc(var(--padding-x-box) - var(--size-half));
+  padding-inline-end: calc(var(--padding-x-box) / 3);
+  position: absolute;
+  top: auto;
+  left: 0;
+  width: var(--popover-body-width);
+  max-height: 72vh;
+  max-height: 72dvh;
+  z-index: var(--zindex-popover);
 
-    // Animations and transitions in details do not work
-    // [open] & {
-    //   opacity: 1;
-    // }
+  // Animations and transitions in details do not work
+  // [open] & {
+  //   opacity: 1;
+  // }
 
-    .is-up > & {
-      bottom: 100%;
-      margin-top: 0;
-      margin-bottom: var(--size-2);
-    }
-
-    .is-right > & {
-      left: auto;
-      right: 0;
-    }
+  .is-up > & {
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: var(--size-2);
   }
 
+  .is-right > & {
+    left: auto;
+    right: 0;
+  }
 }
 
 .popover__content {
