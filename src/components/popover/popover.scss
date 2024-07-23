@@ -1,30 +1,9 @@
 @use 'sass:math';
-@import '../slider/slider';
+// @import '../slider/slider';
 
-// -----------------------------------------------------------------------------
-// BASE
-// -----------------------------------------------------------------------------
-// #region
+@mixin popover-body {
+  --translate-shift: -3rem;
 
-// CONTAINER
-/* details */.popover {
-  --popover-summary-color: var(--color-ink-2ry);
-  --popover-summary-background: var(----color-ink-min);
-  --popover-body-background: var(--color-background-frosted-glass);
-  --popover-body-border-radius: var(--border-radius-base);
-  --popover-body-border: 0;
-  --popover-body-box-shadow: var(--box-shadow-z3);
-  --popover-body-color: var(--color-ink-2ry);
-  --popover-body-width: var(--width-base);
-  --scrollbar-track: transparent;
-
-  position: relative;
-  width: fit-content;
-}
-
-// BODY
-
-.popover__body {
   background-color: var(--popover-body-background);
   backdrop-filter: var(--backdrop-filter-blur-lg);
   border-radius: var(--popover-body-border-radius);
@@ -32,36 +11,113 @@
   box-shadow: var(--popover-body-box-shadow);
   color: var(--popover-body-color);
   display: flex;
-  list-style: none;
   flex-direction: column;
+  list-style: none;
   text-align: left;
   margin: var(--size-1p5) 0 0;
   padding-block: var(--size-2);
   padding-inline-start: calc(var(--padding-x-box) - var(--size-half));
   padding-inline-end: calc(var(--padding-x-box) / 3);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity var(--duration-sm) var(--easing-base),
+    translate var(--duration-sm) var(--easing-base);
   position: absolute;
   top: auto;
   left: 0;
+  translate: 0 var(--translate-shift);
   width: var(--popover-body-width);
   max-height: 72vh;
   max-height: 72dvh;
   z-index: var(--zindex-popover);
+}
 
-  // Animations and transitions in details do not work
-  // [open] & {
-  //   opacity: 1;
-  // }
+@mixin popover-summary {
+  background: var(--popover-summary-background);
+  border: 0;
+  color: var(--popover-summary-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--size-half);
+  padding: var(--size-half) var(--size-1);
+}
 
-  .is-up > & {
-    bottom: 100%;
-    margin-top: 0;
-    margin-bottom: var(--size-2);
+// -----------------------------------------------------------------------------
+// BASE
+// -----------------------------------------------------------------------------
+// #region
+
+// CONTAINER
+.popover,
+.tablet\:popover {
+  --popover-summary-color: var(--color-ink-2ry);
+  --popover-summary-background: var(--color-ink-min);
+  --popover-body-background: var(--color-background-frosted-glass);
+  --popover-body-border-radius: var(--border-radius-base);
+  --popover-body-border: 0;
+  --popover-body-box-shadow: var(--box-shadow-z3);
+  --popover-body-color: var(--color-ink-2ry);
+  --popover-body-width: var(--width-sm);
+  --scrollbar-track: transparent;
+
+  position: relative;
+  width: fit-content;
+
+  @media only screen and (min-width: 768px) and (min-height: 341px) {
+    --popover-body-width: var(--width-base);
   }
+}
 
-  .is-right > & {
-    left: auto;
-    right: 0;
+.popover {
+  display: contents;
+
+  @media only screen and (min-width: 768px) and (min-height: 341px) {
+    display: block;
   }
+}
+
+// BODY
+
+// Large screen widget
+:where(.tablet\:popover) .popover__body {
+  @media only screen and (min-width: 768px) and (min-height: 341px) {
+    @include popover-body;
+  }
+}
+
+:where(.tablet\:popover.is-open) .popover__body {
+  @media only screen and (min-width: 768px) and (min-height: 341px) {
+    opacity: 1;
+    pointer-events: all;
+    translate: 0;
+  }
+}
+
+// All-screen widget
+:where(.popover) .popover__body {
+  @include popover-body;
+}
+
+:where(.popover.is-open) .popover__body {
+  opacity: 1;
+  pointer-events: all;
+  translate: 0;
+}
+
+// Both widgets
+.is-up > .popover__body {
+  --translate-shift: 3rem;
+
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: var(--size-2);
+}
+
+.is-right > .popover__body {
+  left: auto;
+  right: 0;
 }
 
 .popover__content {
@@ -95,24 +151,31 @@
   }
 }
 
-// Summary
-:where(.popover) summary {
-  background: var(--popover-summary-background);
-  color: var(--popover-summary-color);
-  display: flex;
-  align-items: center;
-  gap: var(--size-half);
-  padding: var(--size-half) var(--size-1);
+// SUMMARY
+
+// Large screen widget
+:where(.tablet\:popover) .popover__summary {
+  @media only screen and (min-width: 768px) and (min-height: 341px) {
+    @include popover-summary;
+  }
 }
 
-// Footer
+// All-screen widget
+:where(.popover) .popover__summary {
+  @include popover-summary;
+}
+
+// FOOTER (both widgets)
 .popover__footer {
   display: flex;
-  justify-content: flex-end;
   padding-top: var(--size-1);
-  padding-inline-start: var(--padding-x-box);
-  padding-inline-end: var(--size-half);
+  padding-inline-start: var(--size-half);
+  padding-inline-end: var(--padding-x-box);
 }
+
+// :where(.popover__footer) .btn {
+//   --button-background: transparent;
+// }
 // #endregion
 
 // -----------------------------------------------------------------------------
@@ -151,6 +214,7 @@
   margin-inline-end: var(--padding-x-box);
   margin-bottom: var(--size-2p5);
   padding-inline-start: var(--size-7);
+  max-width: calc(100% - var(--size-3));
 }
 
 // All
@@ -303,21 +367,21 @@
 
 .popover.is-invert,
 .popover[data-theme='dark'],
-:where(.header, .search-ui-container, [data-theme='dark']) .popover {
+:where(.header, .search-ui-container, [data-theme='dark']) .popover,
+:where(.header, .search-ui-container, [data-theme='dark']) .tablet\:popover {
   --popover-summary-color: var(--color-ink-inverse-max);
-  --popover-summary-background: var(--color-neutral-900);
-  --popover-body-background: var(--color-dark-500);
+  --popover-body-background: var(--color-dark-06);
   --popover-body-color: var(--color-ink-inverse-base);
   --icon-chevron-down: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2234%22%20height%3D%2234%22%20viewBox%3D%220%200%2034%2034%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M8.5%2012.75L17%2021.25L25.5%2012.75%22%20stroke%3D%22white%22%20stroke-width%3D%223%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E%0A');
 
   input {
-    --form-control-background-color: var(--color-dark-200);
+    --form-control-background-color: var(--color-light-007);
     --form-control-color: var(--color-ink-inverse-base);
   }
 
   .btn {
-    --button-hover: var(--color-light-50);
-    --button-color: var(--color-ink-inverse-base);
+    --button-hover: var(--color-light-007);
+    --button-color: var(--color-brand-300);
   }
 
   .menu__item {
@@ -325,6 +389,16 @@
     --menu-item-hover: var(--color-ink-inverse-min);
     --menu-item-icon-color: var(--color-ink-inverse-2ry);
   }
+}
+
+:where(.header, [data-theme='dark']) .popover,
+:where(.header, [data-theme='dark']) .tablet\:popover {
+  --popover-summary-background: var(--color-neutral-900);
+}
+
+:where(.search-ui-container) .popover,
+:where(.search-ui-container) .tablet\:popover {
+  --popover-summary-background: transparent;
 }
 // #endregion
 

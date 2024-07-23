@@ -17,35 +17,38 @@
 
   --h:         var(--h-blue);
 
-  --color-neutral-lightest: hsl(0 0% 99%);
-  --color-neutral-50:       hsl(0 0% 96%);
-  --color-neutral-100:      hsl(0 0% 91%);
-  --color-neutral-200:      hsl(0 0% 82%);
-  --color-neutral-300:      hsl(0 0% 69%);
-  --color-neutral-400:      hsl(0 0% 50%);
-  --color-neutral-500:      hsl(0 0% 43%);
-  --color-neutral-600:      hsl(0 0% 36%);
-  --color-neutral-700:      hsl(0 0% 31%);
-  --color-neutral-800:      hsl(0 0% 27%);
-  --color-neutral-900:      hsl(0 0% 24%);
-  --color-neutral-950:      hsl(0 0% 15%);
   --color-neutral-darkest:  hsl(0 0% 8%);
+  --color-neutral-950:      hsl(0 0% 15%);
+  --color-neutral-900:      hsl(0 0% 24%);
+  --color-neutral-800:      hsl(0 0% 27%);
+  --color-neutral-700:      hsl(0 0% 31%);
+  --color-neutral-600:      hsl(0 0% 36%);
+  --color-neutral-500:      hsl(0 0% 43%);
+  --color-neutral-400:      hsl(0 0% 50%);
+  --color-neutral-300:      hsl(0 0% 69%);
+  --color-neutral-200:      hsl(0 0% 82%);
+  --color-neutral-100:      hsl(0 0% 91%);
+  --color-neutral-50:       hsl(0 0% 96%);
+  --color-neutral-lightest: hsl(0 0% 99%);
+
 
   --color-dark-max: rgb(0 0 0);
-  --color-dark-950: rgb(0 0 0 / 0.87);
-  --color-dark-500: rgb(0 0 0 / 0.6);
-  --color-dark-300: rgb(0 0 0 / 0.38);
-  --color-dark-200: rgb(0 0 0 / 0.2);
-  --color-dark-100: rgb(0 0 0 / 0.12);
-  --color-dark-50:  rgb(0 0 0 / 0.04);
+  --color-dark-087: rgb(0 0 0 / 0.87);
+  --color-dark-06:  rgb(0 0 0 / 0.6);
+  --color-dark-038: rgb(0 0 0 / 0.38);
+  --color-dark-02:  rgb(0 0 0 / 0.2);
+  --color-dark-012: rgb(0 0 0 / 0.12);
+  --color-dark-004: rgb(0 0 0 / 0.04);
 
   --color-light-max: hsl(0 0% 100%);
-  --color-light-950: hsl(0 0% 100% / 0.87);
-  --color-light-500: hsl(0 0% 100% / 0.6);
-  --color-light-300: hsl(0 0% 100% / 0.38);
-  --color-light-200: hsl(0 0% 100% / 0.2);
-  --color-light-100: hsl(0 0% 100% / 0.12);
-  --color-light-50:  hsl(0 0% 100% / 0.07);
+  --color-light-087: hsl(0 0% 100% / 0.87);
+  --color-light-07:  hsl(0 0% 100% / 0.7);
+  --color-light-06:  hsl(0 0% 100% / 0.6);
+  --color-light-054: hsl(0 0% 100% / 0.54);
+  --color-light-038: hsl(0 0% 100% / 0.38);
+  --color-light-02:  hsl(0 0% 100% / 0.2);
+  --color-light-012: hsl(0 0% 100% / 0.12);
+  --color-light-007: hsl(0 0% 100% / 0.07);
 
   --color-brand-50:  hsl(var(--h) var(--s) 97%);
   --color-brand-100: hsl(var(--h) var(--s) 94%);
@@ -69,20 +72,20 @@
   --backdrop-filter-blur:           #{saturate(180%) blur(20px)};
   --backdrop-filter-blur-lg:        #{saturate(180%) blur(50px)};
 
-  --color-ink-base:   hsl(var(--h) var(--s-neutral) 35%);
-  --color-ink-2ry:    hsl(var(--h) var(--s-neutral) 48%);
-  --color-ink-3ry:    hsl(var(--h) var(--s-neutral) 59%);
-  --color-ink-border: hsl(var(--h) var(--s-neutral) 85%);
+  --color-ink-base:   var(--color-dark-087);
+  --color-ink-2ry:    var(--color-dark-06);
+  --color-ink-3ry:    var(--color-dark-038);
+  --color-ink-border: var(--color-dark-012);
   --color-ink-shadow: 0 0 0;
   --color-ink-min:    rgb(var(--color-ink-shadow) / 0.04);
   --color-ink-link:   hsl(var(--h) var(--s) 54%);
 
-  --color-ink-inverse-max:    hsl(0 0% 100%);
-  --color-ink-inverse-base:   hsl(0 0% 100% / 0.87);
-  --color-ink-inverse-2ry:    hsl(0 0% 100% / 0.54);
-  --color-ink-inverse-3ry:    hsl(0 0% 100% / 0.38);
-  --color-ink-inverse-border: hsl(0 0% 100% / 0.2);
-  --color-ink-inverse-min:   hsl(0 0% 100% / 0.07);
+  --color-ink-inverse-max:    var(--color-light-max);
+  --color-ink-inverse-base:   var(--color-light-07);
+  --color-ink-inverse-2ry:    var(--color-light-054);
+  --color-ink-inverse-3ry:    var(--color-light-038);
+  --color-ink-inverse-border: var(--color-light-012);
+  --color-ink-inverse-min:    var(--color-light-min);
 
   --size-half: #{math.div(4, 16)}rem;
   --size-1:    #{math.div(8, 16)}rem;
@@ -188,6 +191,7 @@
   --zindex-fab:     30;
   --zindex-popover: 40;
   --zindex-tooltip: 50;
+  --zindex-offcanvas: 60;
 
 
   // Micro-interactions such as button and toggle
@@ -213,11 +217,16 @@
   --easing-disappearance: cubic-bezier(0.2, 0, 1, 0.9);
   --easing-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-  --scrollbar-track: var(--color-dark-100);
-  --scrollbar-thumb: var(--color-dark-200);
+  --scrollbar-track: var(--color-dark-012);
+  --scrollbar-thumb: var(--color-dark-02);
   --scrollbar-thumb-size: var(--size-1p5);
 
   --height-btn: var(--size-5);
+
+  --icon-calendar-light: url('data:image/svg+xml,%3Csvg%20width%3D%2229%22%20height%3D%2228%22%20viewBox%3D%220%200%2029%2028%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M6.33333%2025.6667C5.69167%2025.6667%205.14236%2025.4382%204.68542%2024.9812C4.22847%2024.5243%204%2023.975%204%2023.3333V6.99999C4%206.35833%204.22847%205.80902%204.68542%205.35208C5.14236%204.89513%205.69167%204.66666%206.33333%204.66666H7.5V2.33333H9.83333V4.66666H19.1667V2.33333H21.5V4.66666H22.6667C23.3083%204.66666%2023.8576%204.89513%2024.3146%205.35208C24.7715%205.80902%2025%206.35833%2025%206.99999V23.3333C25%2023.975%2024.7715%2024.5243%2024.3146%2024.9812C23.8576%2025.4382%2023.3083%2025.6667%2022.6667%2025.6667H6.33333ZM6.33333%2023.3333H22.6667V11.6667H6.33333V23.3333ZM6.33333%209.33333H22.6667V6.99999H6.33333V9.33333ZM14.5%2016.3333C14.1694%2016.3333%2013.8924%2016.2215%2013.6688%2015.9979C13.4451%2015.7743%2013.3333%2015.4972%2013.3333%2015.1667C13.3333%2014.8361%2013.4451%2014.559%2013.6688%2014.3354C13.8924%2014.1118%2014.1694%2014%2014.5%2014C14.8306%2014%2015.1076%2014.1118%2015.3313%2014.3354C15.5549%2014.559%2015.6667%2014.8361%2015.6667%2015.1667C15.6667%2015.4972%2015.5549%2015.7743%2015.3313%2015.9979C15.1076%2016.2215%2014.8306%2016.3333%2014.5%2016.3333ZM9.83333%2016.3333C9.50278%2016.3333%209.22569%2016.2215%209.00208%2015.9979C8.77847%2015.7743%208.66667%2015.4972%208.66667%2015.1667C8.66667%2014.8361%208.77847%2014.559%209.00208%2014.3354C9.22569%2014.1118%209.50278%2014%209.83333%2014C10.1639%2014%2010.441%2014.1118%2010.6646%2014.3354C10.8882%2014.559%2011%2014.8361%2011%2015.1667C11%2015.4972%2010.8882%2015.7743%2010.6646%2015.9979C10.441%2016.2215%2010.1639%2016.3333%209.83333%2016.3333ZM19.1667%2016.3333C18.8361%2016.3333%2018.559%2016.2215%2018.3354%2015.9979C18.1118%2015.7743%2018%2015.4972%2018%2015.1667C18%2014.8361%2018.1118%2014.559%2018.3354%2014.3354C18.559%2014.1118%2018.8361%2014%2019.1667%2014C19.4972%2014%2019.7743%2014.1118%2019.9979%2014.3354C20.2215%2014.559%2020.3333%2014.8361%2020.3333%2015.1667C20.3333%2015.4972%2020.2215%2015.7743%2019.9979%2015.9979C19.7743%2016.2215%2019.4972%2016.3333%2019.1667%2016.3333ZM14.5%2021C14.1694%2021%2013.8924%2020.8882%2013.6688%2020.6646C13.4451%2020.441%2013.3333%2020.1639%2013.3333%2019.8333C13.3333%2019.5028%2013.4451%2019.2257%2013.6688%2019.0021C13.8924%2018.7785%2014.1694%2018.6667%2014.5%2018.6667C14.8306%2018.6667%2015.1076%2018.7785%2015.3313%2019.0021C15.5549%2019.2257%2015.6667%2019.5028%2015.6667%2019.8333C15.6667%2020.1639%2015.5549%2020.441%2015.3313%2020.6646C15.1076%2020.8882%2014.8306%2021%2014.5%2021ZM9.83333%2021C9.50278%2021%209.22569%2020.8882%209.00208%2020.6646C8.77847%2020.441%208.66667%2020.1639%208.66667%2019.8333C8.66667%2019.5028%208.77847%2019.2257%209.00208%2019.0021C9.22569%2018.7785%209.50278%2018.6667%209.83333%2018.6667C10.1639%2018.6667%2010.441%2018.7785%2010.6646%2019.0021C10.8882%2019.2257%2011%2019.5028%2011%2019.8333C11%2020.1639%2010.8882%2020.441%2010.6646%2020.6646C10.441%2020.8882%2010.1639%2021%209.83333%2021ZM19.1667%2021C18.8361%2021%2018.559%2020.8882%2018.3354%2020.6646C18.1118%2020.441%2018%2020.1639%2018%2019.8333C18%2019.5028%2018.1118%2019.2257%2018.3354%2019.0021C18.559%2018.7785%2018.8361%2018.6667%2019.1667%2018.6667C19.4972%2018.6667%2019.7743%2018.7785%2019.9979%2019.0021C20.2215%2019.2257%2020.3333%2019.5028%2020.3333%2019.8333C20.3333%2020.1639%2020.2215%2020.441%2019.9979%2020.6646C19.7743%2020.8882%2019.4972%2021%2019.1667%2021Z%22%20fill%3D%22white%22%20fill-opacity%3D%220.5%22%2F%3E%3C%2Fsvg%3E');
+  --icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+
+  --popover-body-background: var(--color-background-frosted-glass);
 
   @media only screen and (min-width: 768px) {
     --padding-x-box: var(--size-3);
@@ -494,12 +503,11 @@ textarea {
 select,
 textarea,
 input:not([type='checkbox']):not([type='radio']):not([type='range']) {
-  max-width: 100%;
+  width: 100%;
 }
 
 // CHECKBOXES
 [type='checkbox'] {
-  --form-control-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
   --form-control-border-radius: var(--size-half);
 
   appearance: none;
@@ -517,7 +525,7 @@ input:not([type='checkbox']):not([type='radio']):not([type='range']) {
     --form-control-background-color: var(--color-neutral-500);
     --form-control-border-color: var(--color-neutral-500);
 
-    background-image: var(--form-control-icon);
+    background-image: var(--icon-checkbox);
     background-position: center;
     background-repeat: no-repeat;
     background-size: var(--size-1p5) auto;
@@ -590,7 +598,7 @@ input:not([type='checkbox']):not([type='radio']):not([type='range']) {
 
 .btn.is-icon,
 .btn.is-ghost {
-  :not(:hover) {
+  &:not(:hover) {
     background: transparent;
   }
 }
@@ -623,24 +631,6 @@ input:not([type='checkbox']):not([type='radio']):not([type='range']) {
 // DUMMY UI
 // -----------------------------------------------------------------------------
 // #region
-.header,
-.search-ui-container {
-  position: fixed;
-  right: 0;
-  left: 0;
-}
-
-.header {
-  background: var(--color-background-header, rgb(0 0 0 / 0.9));
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-inline: var(--size-2);
-  top: 0;
-  height: var(--size-7);
-  z-index: 1;
-}
-
 .filters {
   display: flex;
   gap: var(--size-2);
@@ -667,7 +657,7 @@ input:not([type='checkbox']):not([type='radio']):not([type='range']) {
     aspect-ratio: 345 / 694;
     content: '';
     position: absolute;
-    top: var(--size-7);
+    top: 0;
     bottom: calc(var(--size-line) * 3);
     width: auto;
   }
@@ -689,6 +679,10 @@ input:not([type='checkbox']):not([type='radio']):not([type='range']) {
     );
     right: 0;
   }
+
+  @media only screen and (min-width: 1360px) and (min-height: 341px) {
+    top: var(--size-7);
+  }
 }
 
 .search-ui-container {
@@ -696,9 +690,12 @@ input:not([type='checkbox']):not([type='radio']):not([type='range']) {
   border: var(--size-1p5) solid hsl(0 0% 12%);
   bottom: 0;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
   padding-inline: var(--size-3);
+  position: fixed;
+  right: 0;
+  left: 0;
   height: calc(var(--size-3) * 3);
 }
 // #endregion

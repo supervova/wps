@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import imageminPlugin from 'vite-plugin-imagemin';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
   plugins: [
@@ -15,13 +16,21 @@ export default defineConfig({
         ],
       },
     }),
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'CNAME',
+          dest: '.',
+        },
+      ],
+    }),
   ],
   build: {
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
         global: resolve(__dirname, 'src/global.scss'),
-        popover: resolve(__dirname, 'src/components/popover/popover.scss'),
+        update: resolve(__dirname, 'src/update.scss'),
       },
       output: {
         entryFileNames: 'assets/js/[name].js',
@@ -34,8 +43,8 @@ export default defineConfig({
             if (name.includes('global')) {
               return 'assets/css/global.css';
             }
-            if (name.includes('popover')) {
-              return 'assets/css/popover.css';
+            if (name.includes('update')) {
+              return 'assets/css/update.css';
             }
             return 'assets/css/[name][extname]';
           }

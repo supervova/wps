@@ -1,5 +1,6 @@
-function closeAllPopovers(selector) {
-  const popovers = document.querySelectorAll(`${selector}.is-open`);
+// popover.js
+function closeAllPopovers() {
+  const popovers = document.querySelectorAll('.tablet\\:popover.is-open');
   popovers.forEach((popover) => {
     const summary = popover.querySelector('.popover__summary');
     popover.classList.remove('is-open');
@@ -14,7 +15,7 @@ export function togglePopover(event) {
   const popover = summary.parentElement;
 
   const isOpen = popover.classList.contains('is-open');
-  closeAllPopovers('.popover, .tablet\\:popover');
+  closeAllPopovers();
 
   if (!isOpen) {
     popover.classList.add('is-open');
@@ -26,14 +27,14 @@ export function togglePopover(event) {
 }
 
 export function handleClickOutside(event) {
-  const isOutside = !event.target.closest('.popover, .tablet\\:popover');
+  const isOutside = !event.target.closest('.tablet\\:popover');
   if (isOutside) {
-    closeAllPopovers('.popover, .tablet\\:popover');
+    closeAllPopovers();
   }
 }
 
 export function handleEscapeKey(event) {
   if (event.key === 'Escape') {
-    closeAllPopovers('.popover, .tablet\\:popover');
+    closeAllPopovers();
   }
 }

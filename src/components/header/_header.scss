@@ -1,0 +1,120 @@
+.header {
+  background: var(--color-background-header, rgb(0 0 0 / 0.9));
+  color: var(--color-ink-inverse-base);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline-start: var(--size-2);
+  padding-inline-end: var(--size-half);
+  height: var(--size-7);
+
+  @media only screen and (min-width: 768px) and (min-height: 341px) {
+    padding-inline-end: var(--size-2);
+  }
+
+  @media only screen and (min-width: 1360px) and (min-height: 341px) {
+    padding-inline: var(--size-3);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: var(--zindex-fixed);
+  }
+}
+
+.header .logo {
+  margin-inline-end: var(--size-3);
+}
+
+[id='header-menu-trigger'] {
+  --height-btn: var(--size-6);
+  padding-inline: var(--size-1);
+
+  @media only screen and (min-width: 768px) and (min-height: 341px) {
+    display: none;
+  }
+}
+
+:where(.header) .tablet\:popover.is-politicians .popover__body {
+  @media only screen and (min-width: 768px) and (max-width: 1359px) and (min-height: 341px) {
+    left: auto;
+    right: 0;
+  }
+}
+
+
+.header__links {
+  display: none;
+
+  @media only screen and (min-width: 768px) and (min-height: 341px) {
+    display: block;
+    flex: 1;
+  }
+}
+
+.header__links ul {
+  display: flex;
+  align-items: center;
+  gap: var(--size-1);
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// spacer
+.header__links ul::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 1px;
+}
+
+.header__links li:nth-child(2),
+.header__links li:nth-child(3),
+.header__links li:nth-child(4) {
+  display: none;
+}
+
+.header__links li:nth-child(2) {
+  @media only screen and (min-width: 1024px) {
+    display: block;
+  }
+}
+
+.header__links li:nth-child(3) {
+  @media only screen and (min-width: 1280px) {
+    display: block;
+  }
+}
+
+.header__links li:nth-child(4) {
+  @media only screen and (min-width: 1360px) {
+    display: block;
+  }
+}
+
+.header__links a {
+  color: var(--color-ink-inverse-2ry);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--size-1);
+  text-decoration: none;
+  height: var(--size-5);
+
+  &:hover {
+    color: var(--color-brand-300);
+
+    .label {
+      text-decoration: underline;
+      text-decoration-skip-ink: auto;
+      text-decoration-thickness: max(0.08em, 1px);
+      text-underline-offset: 0.2em;
+    }
+  }
+}
+
+.header__links .material-symbols-outlined {
+  font-size: var(--size-3);
+}
+
