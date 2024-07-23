@@ -10,101 +10,160 @@
   </head>
   <body>
     <header class="header">
-      <div class="drawer">
-        <div class="tablet:popover">
-          <button class="popover__summary" type="button">
-            Persons: <span class="value">all</span>
-            <span class="material-symbols-outlined is-base"> stat_minus_1 </span>
-          </button>
-          <div class="popover__body">
-            <input id="filter-search" type="search" name="search" autocapitalize="off" autocomplete="off" aria-label="Find a politician" placeholder="Search">
-            <ul class="popover__content">
-              <li class="person is-all">
-                <label for="filter-all">All</label>
-                <input id="filter-all" type="checkbox" name="all" checked>
-              </li>
-              <li class="person is-democrat">
-                <figure>
-                  <figure class="person__avatar">
-                    <img src="/assets/images/biden.png" srcset="/assets/images/biden.png 1x, /assets/images/biden@2x.png 2x" width="56" height="64" alt="Joe Biden">
+      <img class="logo" src="/assets/images/logo-wps.svg" alt="What Politics Say - Logo">
+      <button class="btn is-ghost" id="header-menu-trigger" aria-label="Menu">
+        <span class="material-symbols-outlined">
+          filter_list
+        </span>
+      </button>
+      <aside class="drawer is-filter">
+        <div class="drawer__body">
+          <h2 class="visually-hidden">Filters</h2>
+          <section class="tablet:popover is-politicians">
+            <h3 class="popover__title">Politicians</h3>
+            <button class="popover__summary" type="button">
+              Persons: <span class="value">all</span>
+              <span class="material-symbols-outlined is-base"> stat_minus_1 </span>
+            </button>
+            <div class="popover__body">
+              <input id="filter-search" type="search" name="search" autocapitalize="off" autocomplete="off" aria-label="Find a politician" placeholder="Search">
+              <ul class="popover__content">
+                <li class="person is-all">
+                  <label for="filter-all">All</label>
+                  <input id="filter-all" type="checkbox" name="all" checked>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar">
+                      <img src="/assets/images/biden.png" srcset="/assets/images/biden.png 1x, /assets/images/biden@2x.png 2x" width="56" height="64" alt="Joe Biden">
+                    </figure>
+                    <figcaption>Joe Biden <small>Democrat</small></figcaption>
                   </figure>
-                  <figcaption>Joe Biden <small>Democrat</small></figcaption>
-                </figure>
-                <input id="filter-biden" type="checkbox" name="biden" checked>
-              </li>
-              <li class="person is-republican">
-                <figure>
-                  <figure class="person__avatar">
-                    <img src="/assets/images/trump.png" srcset="/assets/images/trump.png 1x, /assets/images/trump@2x.png 2x" width="56" height="64" alt="Donald Trump">
+                  <input id="filter-biden" type="checkbox" name="biden" checked>
+                </li>
+                <li class="person is-republican">
+                  <figure>
+                    <figure class="person__avatar">
+                      <img src="/assets/images/trump.png" srcset="/assets/images/trump.png 1x, /assets/images/trump@2x.png 2x" width="56" height="64" alt="Donald Trump">
+                    </figure>
+                    <figcaption>Donald Trump <small>Republican</small></figcaption>
                   </figure>
-                  <figcaption>Donald Trump <small>Republican</small></figcaption>
-                </figure>
-                <input id="filter-trump" type="checkbox" name="biden" checked>
-              </li>
-              <li class="person is-democrat">
-                <figure>
-                  <figure class="person__avatar">
-                    <img src="/assets/images/ocasio-cortez.png" srcset="/assets/images/ocasio-cortez.png 1x, /assets/images/ocasio-cortez@2x.png 2x" width="56" height="64" alt="Alexandria Ocasio-Cortez">
+                  <input id="filter-trump" type="checkbox" name="biden" checked>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar">
+                      <img src="/assets/images/ocasio-cortez.png" srcset="/assets/images/ocasio-cortez.png 1x, /assets/images/ocasio-cortez@2x.png 2x" width="56" height="64" alt="Alexandria Ocasio-Cortez">
+                    </figure>
+                    <figcaption>Alexandria Ocasio-Cortez <small>Democrat</small></figcaption>
                   </figure>
-                  <figcaption>Alexandria Ocasio-Cortez <small>Democrat</small></figcaption>
-                </figure>
-                <input id="filter-ocasio-cortez" type="checkbox" name="biden" checked>
-              </li>
-              <li class="person is-republican">
-                <figure>
-                  <figure class="person__avatar">
-                    <img src="/assets/images/vance.png" srcset="/assets/images/vance.png 1x, /assets/images/vance@2x.png 2x" width="56" height="64" alt="J.D. Vance">
+                  <input id="filter-ocasio-cortez" type="checkbox" name="biden" checked>
+                </li>
+                <li class="person is-republican">
+                  <figure>
+                    <figure class="person__avatar">
+                      <img src="/assets/images/vance.png" srcset="/assets/images/vance.png 1x, /assets/images/vance@2x.png 2x" width="56" height="64" alt="J.D. Vance">
+                    </figure>
+                    <figcaption>J.D. Vance <small>Republican</small></figcaption>
                   </figure>
-                  <figcaption>J.D. Vance <small>Republican</small></figcaption>
-                </figure>
-                <input id="filter-vance" type="checkbox" name="biden" checked>
-              </li>
-              <li class="person is-democrat">
-                <figure>
-                  <figure class="person__avatar">
-                    <img src="/assets/images/harris.png" srcset="/assets/images/harris.png 1x, /assets/images/harris@2x.png 2x" width="56" height="64" alt="Kamala Harris">
+                  <input id="filter-vance" type="checkbox" name="biden" checked>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar">
+                      <img src="/assets/images/harris.png" srcset="/assets/images/harris.png 1x, /assets/images/harris@2x.png 2x" width="56" height="64" alt="Kamala Harris">
+                    </figure>
+                    <figcaption>Kamala Harris <small>Democrat</small></figcaption>
                   </figure>
-                  <figcaption>Kamala Harris <small>Democrat</small></figcaption>
-                </figure>
-                <input id="filter-harris" type="checkbox" name="biden" checked>
-              </li>
-              <li class="person is-republican">
-                <figure>
-                  <figure class="person__avatar">
-                    <img src="/assets/images/rubio.png" srcset="/assets/images/rubio.png 1x, /assets/images/rubio@2x.png 2x" width="56" height="64" alt="Marco Rubio">
+                  <input id="filter-harris" type="checkbox" name="biden" checked>
+                </li>
+                <li class="person is-republican">
+                  <figure>
+                    <figure class="person__avatar">
+                      <img src="/assets/images/rubio.png" srcset="/assets/images/rubio.png 1x, /assets/images/rubio@2x.png 2x" width="56" height="64" alt="Marco Rubio">
+                    </figure>
+                    <figcaption>Marco Rubio <small>Republican</small></figcaption>
                   </figure>
-                  <figcaption>Marco Rubio <small>Republican</small></figcaption>
-                </figure>
-                <input id="filter-rubio" type="checkbox" name="biden" checked>
-              </li>
-            </ul>
-            <div class="popover__footer">
-              <button class="btn is-ghost" type="submit">Apply</button>
+                  <input id="filter-rubio" type="checkbox" name="biden" checked>
+                </li>
+              </ul>
+              <div class="popover__footer">
+                <button class="btn is-ghost" type="submit">Apply</button>
+              </div>
             </div>
-          </div>
+          </section>
+          <section class="tablet:popover is-range">
+            <h3 class="popover__title">Date range</h3>
+            <button class="popover__summary" type="button">
+              Time: <span class="value">any</span>
+              <span class="material-symbols-outlined is-base"> stat_minus_1 </span>
+            </button>
+            <div class="popover__body">
+              <div class="popover__content">
+                <p class="form-field">
+                  <label class="visually-hidden" for="filter-start-date">from</label>
+                  <input id="filter-start-date" type="date" name="start-date" value="1970-01-01" min="1970-01-01" autocomplete="off">
+                </p>
+                <p class="form-field">
+                  <label class="visually-hidden" for="filter-end-date">to</label>
+                  <input id="filter-end-date" type="date" name="end-date" value="2024-07-22" min="1970-01-01" autocomplete="off">
+                </p>
+              </div>
+              <div class="popover__footer">
+                <button class="btn is-ghost" type="submit">Apply</button>
+              </div>
+            </div>
+          </section>
         </div>
-        <div class="tablet:popover">
-          <button class="popover__summary" type="button">
-            Time: <span class="value">any</span>
-            <span class="material-symbols-outlined is-base"> stat_minus_1 </span>
-          </button>
-          <div class="popover__body">
-            <div class="popover__content">
-              <p class="form-field">
-                <label class="visually-hidden" for="filter-start-date">from</label>
-                <input id="filter-start-date" type="date" name="start-date" value="1970-01-01" min="1970-01-01" autocomplete="off">
-              </p>
-              <p class="form-field">
-                <label class="visually-hidden" for="filter-end-date">to</label>
-                <input id="filter-end-date" type="date" name="end-date" value="2024-07-22" min="1970-01-01" autocomplete="off">
-              </p>
-            </div>
-            <div class="popover__footer">
-              <button class="btn is-ghost" type="submit">Apply</button>
-            </div>
-          </div>
-        </div>
-      </div>
+        <footer class="drawer__footer">
+          <button class="btn is-ghost" type="submit">Apply</button>
+          <button class="btn is-ghost" type="reset">Cancel</button>
+        </footer>
+      </aside>
+      <nav class="header__links">
+        <ul>
+          <li>
+            <a href="mailto:info@playphrase.me" target="_blank">
+              <span class="material-symbols-outlined">
+                mail
+              </span>
+              <span class="label">
+                Contact Us
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UCD_uvkY4IcFDEkZ3fgYhFWA" target="_blank" rel="noopener noreferrer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="currentColor" stroke-width="2" d="M10.9139 12.9709L5 20H5.1L10.9688 13.0233M13.4385 10.1553L18.6 4H18.5L13.3801 10.107M4 4H9L20.5 20H15.5L4 4Z" />
+              </svg>
+              <span class="label">
+                ex-Twitter
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UCD_uvkY4IcFDEkZ3fgYhFWA" target="_blank" rel="noopener noreferrer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M22.0617 6.93984C21.9422 6.49462 21.7078 6.0886 21.382 5.76243C21.0563 5.43625 20.6505 5.20136 20.2055 5.08125C18.5672 4.64063 12 4.64062 12 4.64062C12 4.64062 5.43281 4.64062 3.79453 5.07891C3.34927 5.19862 2.94334 5.43339 2.61751 5.75962C2.29169 6.08586 2.05744 6.49208 1.93828 6.9375C1.5 8.57812 1.5 12 1.5 12C1.5 12 1.5 15.4219 1.93828 17.0602C2.17969 17.9648 2.89219 18.6773 3.79453 18.9188C5.43281 19.3594 12 19.3594 12 19.3594C12 19.3594 18.5672 19.3594 20.2055 18.9188C21.1102 18.6773 21.8203 17.9648 22.0617 17.0602C22.5 15.4219 22.5 12 22.5 12C22.5 12 22.5 8.57813 22.0617 6.93984ZM10 15.1406V8.85938L15.3516 11.9766L10 15.1406Z" />
+              </svg>
+              <span class="label">
+                Youtube
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/playphrase/" target="_blank" rel="noopener noreferrer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M5 2C3.34315 2 2 3.34315 2 5V19C2 20.6569 3.34315 22 5 22H19C20.6569 22 22 20.6569 22 19V5C22 3.34315 20.6569 2 19 2H5ZM14.9771 13V21H12V13H9V10H12V8.08715C12 5.34858 13.5157 3.85715 15.98 3.85715C17.1603 3.85715 17.99 3.94458 18.2857 3.98315V6.84515L16.5766 6.846C15.2364 6.846 14.9771 7.47729 14.9771 8.40386V10H18.173L17.7569 13H14.9771Z" />
+              </svg>
+              <span class="label">
+                Facebook
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <div class="video-player-container"></div>
