@@ -1,28 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What Politics Say — Search for the Truth</title>
-    <link rel="stylesheet" href="/src/global.scss">
-    <link rel="stylesheet" href="/src/components/popover/popover.scss">
-
+    <script type="module" crossorigin src="/assets/js/main.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/css/global.css">
+    <link rel="stylesheet" crossorigin href="/assets/css/update.css">
   </head>
   <body>
     <header class="header">
-
-      <div class="filters">
-        <!-- Politicians -->
-        <details class="popover">
-          <summary>
+      <div class="drawer">
+        <div class="tablet:popover">
+          <button class="popover__summary" type="button">
             Persons: <span class="value">all</span>
-            <span class="material-symbols-outlined is-base">
-              stat_minus_1
-            </span>
-          </summary>
+            <span class="material-symbols-outlined is-base"> stat_minus_1 </span>
+          </button>
           <div class="popover__body">
-
-            <input id="filter-search" type="search" name="search" autocorrect="off" autocapitalize="off" autocomplete="off" aria-label="Find a politician" placeholder="Search">
+            <input id="filter-search" type="search" name="search" autocapitalize="off" autocomplete="off" aria-label="Find a politician" placeholder="Search">
             <ul class="popover__content">
               <li class="person is-all">
                 <label for="filter-all">All</label>
@@ -31,139 +26,112 @@
               <li class="person is-democrat">
                 <figure>
                   <figure class="person__avatar">
-                    <img src="/src/assets/images/persons/biden.png" srcset="/src/assets/images/persons/biden.png 1x, /src/assets/images/persons/biden@2x.png 2x" width="56" height="64" alt="Joe Biden">
+                    <img src="/assets/images/biden.png" srcset="/assets/images/biden.png 1x, /assets/images/biden@2x.png 2x" width="56" height="64" alt="Joe Biden">
                   </figure>
-                  <figcaption>
-                    Joe Biden <small>Democrat</small>
-                  </figcaption>
+                  <figcaption>Joe Biden <small>Democrat</small></figcaption>
                 </figure>
                 <input id="filter-biden" type="checkbox" name="biden" checked>
               </li>
               <li class="person is-republican">
                 <figure>
                   <figure class="person__avatar">
-                    <img src="/src/assets/images/persons/trump.png" srcset="/src/assets/images/persons/trump.png 1x, /src/assets/images/persons/trump@2x.png 2x" width="56" height="64" alt="Donald Trump">
+                    <img src="/assets/images/trump.png" srcset="/assets/images/trump.png 1x, /assets/images/trump@2x.png 2x" width="56" height="64" alt="Donald Trump">
                   </figure>
-                  <figcaption>
-                    Donald Trump <small>Republican</small>
-                  </figcaption>
+                  <figcaption>Donald Trump <small>Republican</small></figcaption>
                 </figure>
                 <input id="filter-trump" type="checkbox" name="biden" checked>
               </li>
               <li class="person is-democrat">
                 <figure>
                   <figure class="person__avatar">
-                    <img src="/src/assets/images/persons/ocasio-cortez.png" srcset="/src/assets/images/persons/ocasio-cortez.png 1x, /src/assets/images/persons/ocasio-cortez@2x.png 2x" width="56" height="64" alt="Alexandria Ocasio-Cortez">
+                    <img src="/assets/images/ocasio-cortez.png" srcset="/assets/images/ocasio-cortez.png 1x, /assets/images/ocasio-cortez@2x.png 2x" width="56" height="64" alt="Alexandria Ocasio-Cortez">
                   </figure>
-                  <figcaption>
-                    Alexandria Ocasio-Cortez <small>Democrat</small>
-                  </figcaption>
+                  <figcaption>Alexandria Ocasio-Cortez <small>Democrat</small></figcaption>
                 </figure>
                 <input id="filter-ocasio-cortez" type="checkbox" name="biden" checked>
               </li>
               <li class="person is-republican">
                 <figure>
                   <figure class="person__avatar">
-                    <img src="/src/assets/images/persons/vance.png" srcset="/src/assets/images/persons/vance.png 1x, /src/assets/images/persons/vance@2x.png 2x" width="56" height="64" alt="J.D. Vance">
+                    <img src="/assets/images/vance.png" srcset="/assets/images/vance.png 1x, /assets/images/vance@2x.png 2x" width="56" height="64" alt="J.D. Vance">
                   </figure>
-                  <figcaption>
-                    J.D. Vance <small>Republican</small>
-                  </figcaption>
+                  <figcaption>J.D. Vance <small>Republican</small></figcaption>
                 </figure>
                 <input id="filter-vance" type="checkbox" name="biden" checked>
               </li>
               <li class="person is-democrat">
                 <figure>
                   <figure class="person__avatar">
-                    <img src="/src/assets/images/persons/harris.png" srcset="/src/assets/images/persons/harris.png 1x, /src/assets/images/persons/harris@2x.png 2x" width="56" height="64" alt="Kamala Harris">
+                    <img src="/assets/images/harris.png" srcset="/assets/images/harris.png 1x, /assets/images/harris@2x.png 2x" width="56" height="64" alt="Kamala Harris">
                   </figure>
-                  <figcaption>
-                    Kamala Harris <small>Democrat</small>
-                  </figcaption>
+                  <figcaption>Kamala Harris <small>Democrat</small></figcaption>
                 </figure>
                 <input id="filter-harris" type="checkbox" name="biden" checked>
               </li>
               <li class="person is-republican">
                 <figure>
                   <figure class="person__avatar">
-                    <img src="/src/assets/images/persons/rubio.png" srcset="/src/assets/images/persons/rubio.png 1x, /src/assets/images/persons/rubio@2x.png 2x" width="56" height="64" alt="Marco Rubio">
+                    <img src="/assets/images/rubio.png" srcset="/assets/images/rubio.png 1x, /assets/images/rubio@2x.png 2x" width="56" height="64" alt="Marco Rubio">
                   </figure>
-                  <figcaption>
-                    Marco Rubio <small>Republican</small>
-                  </figcaption>
+                  <figcaption>Marco Rubio <small>Republican</small></figcaption>
                 </figure>
                 <input id="filter-rubio" type="checkbox" name="biden" checked>
               </li>
             </ul>
-            <footer class="popover__footer">
-              <button class="btn is-ghost" role="submit">
-                Apply
-              </button>
-            </footer>
+            <div class="popover__footer">
+              <button class="btn is-ghost" type="submit">Apply</button>
+            </div>
           </div>
-        </details>
-
-        <!-- Period -->
-        <details class="popover is-period">
-          <summary>
+        </div>
+        <div class="tablet:popover">
+          <button class="popover__summary" type="button">
             Time: <span class="value">any</span>
-            <span class="material-symbols-outlined is-base">
-              stat_minus_1
-            </span>
-          </summary>
+            <span class="material-symbols-outlined is-base"> stat_minus_1 </span>
+          </button>
           <div class="popover__body">
             <div class="popover__content">
               <p class="form-field">
-                <label for="filter-start-date">from</label>
-                <input id="filter-start-date" type="text" name="start-date" value="01.01.1970" autocomplete="off">
+                <label class="visually-hidden" for="filter-start-date">from</label>
+                <input id="filter-start-date" type="date" name="start-date" value="1970-01-01" min="1970-01-01" autocomplete="off">
               </p>
               <p class="form-field">
-                <label for="filter-end-date">to</label>
-                <input id="filter-end-date" type="text" name="end-date" value="17.07.2024" autocomplete="off">
+                <label class="visually-hidden" for="filter-end-date">to</label>
+                <input id="filter-end-date" type="date" name="end-date" value="2024-07-22" min="1970-01-01" autocomplete="off">
               </p>
-              <div class="slider">
-                <input class="slider__base" id="filter-period-start" type="range" min="0" max="100" value="0" aria-label="Start Date" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-                <input class="slider__base" id="filter-period-end" type="range" min="0" max="100" value="100" aria-label="End Date" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
-              </div>
+            </div>
+            <div class="popover__footer">
+              <button class="btn is-ghost" type="submit">Apply</button>
             </div>
           </div>
-        </details>
+        </div>
       </div>
-
     </header>
 
     <div class="video-player-container"></div>
 
     <footer class="search-ui-container">
-      <details class="popover is-up is-right">
-        <summary class="btn is-icon">
-          <span class="material-symbols-outlined">
-            more_horiz
-          </span>
+      <div class="popover is-up is-right">
+        <button class="popover__summary" type="button">
+          <span class="material-symbols-outlined"> more_horiz </span>
           <span class="visually-hidden">More</span>
-        </summary>
+        </button>
         <div class="popover__body">
           <ul class="popover__content menu">
             <li>
               <a class="menu__item" href="javascript:void(0)">
-                <span class="material-symbols-outlined is-base">
-                  keyboard
-                </span>
+                <span class="material-symbols-outlined is-base"> keyboard </span>
                 Keyboard Shortcut
               </a>
             </li>
             <li>
               <a class="menu__item" href="javascript:void(0)">
-                <span class="material-symbols-outlined is-base">
-                  settings
-                </span>
+                <span class="material-symbols-outlined is-base"> settings </span>
                 Settings
               </a>
             </li>
           </ul>
         </div>
-      </details>
+      </div>
     </footer>
-    <script src="/src/main.js" type="module"></script>
   </body>
 </html>
