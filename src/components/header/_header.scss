@@ -36,7 +36,7 @@
 }
 
 :where(.header) .tablet\:popover.is-politicians .popover__body {
-  @media only screen and (min-width: 768px) and (max-width: 1359px) and (min-height: 341px) {
+  @media only screen and (min-width: 768px) and (min-height: 341px) {
     left: auto;
     right: 0;
   }

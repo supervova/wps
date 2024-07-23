@@ -660,6 +660,10 @@ input:not([type='checkbox']):not([type='radio']):not([type='range']) {
     top: 0;
     bottom: calc(var(--size-line) * 3);
     width: auto;
+
+    @media only screen and (min-width: 1360px) and (min-height: 341px) {
+      top: var(--size-7);
+    }
   }
 
   &::before {
@@ -678,10 +682,6 @@ input:not([type='checkbox']):not([type='radio']):not([type='range']) {
       var(--vignetting)
     );
     right: 0;
-  }
-
-  @media only screen and (min-width: 1360px) and (min-height: 341px) {
-    top: var(--size-7);
   }
 }
 
