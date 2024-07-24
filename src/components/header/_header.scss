@@ -8,11 +8,11 @@
   padding-inline-end: var(--size-half);
   height: var(--size-7);
 
-  @media only screen and (min-width: 768px) and (min-height: 341px) {
+  @media only screen and (min-width: 768px) and (min-height: 361px) {
     padding-inline-end: var(--size-2);
   }
 
-  @media only screen and (min-width: 1360px) and (min-height: 341px) {
+  @media only screen and (min-width: 1360px) and (min-height: 361px) {
     padding-inline: var(--size-3);
     position: fixed;
     top: 0;
@@ -30,13 +30,13 @@
   --height-btn: var(--size-6);
   padding-inline: var(--size-1);
 
-  @media only screen and (min-width: 768px) and (min-height: 341px) {
+  @media only screen and (min-width: 768px) and (min-height: 361px) {
     display: none;
   }
 }
 
 :where(.header) .tablet\:popover.is-politicians .popover__body {
-  @media only screen and (min-width: 768px) and (min-height: 341px) {
+  @media only screen and (min-width: 768px) and (min-height: 361px) {
     left: auto;
     right: 0;
   }
@@ -46,7 +46,7 @@
 .header__links {
   display: none;
 
-  @media only screen and (min-width: 768px) and (min-height: 341px) {
+  @media only screen and (min-width: 768px) and (min-height: 361px) {
     display: block;
     flex: 1;
   }

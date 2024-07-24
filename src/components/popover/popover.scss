@@ -65,7 +65,7 @@
   position: relative;
   width: fit-content;
 
-  @media only screen and (min-width: 768px) and (min-height: 341px) {
+  @media only screen and (min-width: 768px) and (min-height: 361px) {
     --popover-body-width: var(--width-base);
   }
 }
@@ -73,7 +73,7 @@
 .popover {
   display: contents;
 
-  @media only screen and (min-width: 768px) and (min-height: 341px) {
+  @media only screen and (min-width: 768px) and (min-height: 361px) {
     display: block;
   }
 }
@@ -82,13 +82,13 @@
 
 // Large screen widget
 :where(.tablet\:popover) .popover__body {
-  @media only screen and (min-width: 768px) and (min-height: 341px) {
+  @media only screen and (min-width: 768px) and (min-height: 361px) {
     @include popover-body;
   }
 }
 
 :where(.tablet\:popover.is-open) .popover__body {
-  @media only screen and (min-width: 768px) and (min-height: 341px) {
+  @media only screen and (min-width: 768px) and (min-height: 361px) {
     opacity: 1;
     pointer-events: all;
     translate: 0;
@@ -155,7 +155,7 @@
 
 // Large screen widget
 :where(.tablet\:popover) .popover__summary {
-  @media only screen and (min-width: 768px) and (min-height: 341px) {
+  @media only screen and (min-width: 768px) and (min-height: 361px) {
     @include popover-summary;
   }
 }

@@ -16,6 +16,7 @@
   --s-neutral: 11%;
 
   --h:         var(--h-blue);
+  --l:         20%;
 
   --color-neutral-darkest:  hsl(0 0% 8%);
   --color-neutral-950:      hsl(0 0% 15%);
@@ -51,20 +52,31 @@
   --color-light-007: hsl(0 0% 100% / 0.07);
 
   --color-brand-50:  hsl(var(--h) var(--s) 97%);
-  --color-brand-100: hsl(var(--h) var(--s) 94%);
-  --color-brand-200: hsl(var(--h) var(--s) 88%);
-  --color-brand-300: hsl(var(--h) var(--s) 81%);
-  --color-brand-400: hsl(var(--h) var(--s) 72%);
-  --color-brand-500: hsl(var(--h) var(--s) 65%);
-  --color-brand-600: hsl(var(--h) var(--s) var(--l));
-  --color-brand-700: hsl(var(--h) var(--s) 54%);
-  --color-brand-800: hsl(var(--h) var(--s) 46%);
-  --color-brand-900: hsl(var(--h) var(--s) 40%);
-  --color-brand-950: hsl(var(--h) var(--s) 24%);
+  --color-brand-100: hsl(var(--h) var(--s) 93%);
+  --color-brand-200: hsl(var(--h) var(--s) 85%);
+  --color-brand-300: hsl(var(--h) var(--s) 71%);
+  --color-brand-400: hsl(var(--h) var(--s) 61%);
+  --color-brand-500: hsl(var(--h) var(--s) 50%);
+  --color-brand-600: hsl(var(--h) var(--s) 44%);
+  --color-brand-700: hsl(var(--h) var(--s) 35%);
+  --color-brand-800: hsl(var(--h) var(--s) 29%);
+  --color-brand-900: hsl(var(--h) var(--s) var(--l));
+  --color-brand-950: hsl(var(--h) var(--s) 16%);
 
   // Functional Colors
-  --color-brand-primary: var(--color-brand-700);
-  --color-brand-2ry:     hsl(var(--h-red) var(--s) 60%);
+  --color-brand-primary: var(--color-brand-900);
+  --color-brand-2ry:     hsl(var(--h-red) var(--s) 37%);
+  --color-brand-gradient-rb:
+    hsl(0 100% 37%),
+    hsl(348 100% 37%) 21%,
+    hsl(340 100% 35%) 30%,
+    hsl(331 100% 33%) 39%,
+    hsl(321 100% 29%) 46%,
+    hsl(309 70% 29%) 54%,
+    hsl(287 50% 30%) 61%,
+    hsl(261 43% 32%) 69%,
+    hsl(232 46% 30%) 79%,
+    hsl(210 100% 20%);
 
   --color-background-base:          var(--color-neutral-50);
   --color-background-2ry:           var(--color-neutral-100);
@@ -116,6 +128,9 @@
   --letter-spacing-base: #{math.div(0.5, 16)}rem;
   --line-height-base:    #{math.div(24, 16)};
 
+  --font-size-small:     #{math.div(12, 16)}rem;
+  --line-height-small:   #{math.div(16, 12)};
+
   --padding-x-box: var(--size-2);
 
   // Rectangular Images
@@ -125,7 +140,7 @@
   --border-radius-sm: var(--size-1p5);
 
   // Boxes (cards, alerts, covers etc), Popovers, Pickers, Tooltips
-  --border-radius-base: var(--size-2p5);
+  --border-radius-base: var(--size-3);
 
   // Modals
   --border-radius-lg: var(--size-4);
@@ -647,9 +662,9 @@ input:not([type='checkbox']):not([type='radio']):not([type='range']) {
     rgba(0 0 0 / 0.8) 75%,
     #000 80%;
 
+  aspect-ratio: 320 / 220;
   background: url('https://e3.365dm.com/24/07/1600x900/skynews-trump-convention_6627346.jpg') 50% no-repeat;
   background-size: cover;
-  flex-grow: 1;
   position: relative;
 
   &::before,
@@ -658,11 +673,13 @@ input:not([type='checkbox']):not([type='radio']):not([type='range']) {
     content: '';
     position: absolute;
     top: 0;
-    bottom: calc(var(--size-line) * 3);
+    bottom: 0;
     width: auto;
 
-    @media only screen and (min-width: 1360px) and (min-height: 341px) {
+    @media only screen and (min-width: 1360px) and (min-height: 361px) {
+      flex-grow: 1;
       top: var(--size-7);
+      bottom: calc(var(--size-line) * 3);
     }
   }
 
@@ -683,6 +700,22 @@ input:not([type='checkbox']):not([type='radio']):not([type='range']) {
     );
     right: 0;
   }
+
+  @media only screen and (min-width: 1360px) and (min-height: 361px) {
+    aspect-ratio: auto;
+    flex-grow: 1;
+  }
+}
+
+.phone\:spacer {
+  border: 0;
+  box-sizing: content-box;
+  overflow: visible;
+  height: calc(var(--size-line) * 4);
+
+  @media only screen and (min-width: 1360px) and (min-height: 361px) {
+    display: none;
+  }
 }
 
 .search-ui-container {
@@ -697,5 +730,6 @@ input:not([type='checkbox']):not([type='radio']):not([type='range']) {
   right: 0;
   left: 0;
   height: calc(var(--size-3) * 3);
+  z-index: var(--zindex-fixed);
 }
 // #endregion
