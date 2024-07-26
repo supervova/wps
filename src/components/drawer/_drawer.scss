@@ -1,14 +1,14 @@
 @use 'sass:math';
 
 .drawer {
-  --popover-body-background: var(--color-dark-06);
+  --popover-body-background: var(--color-dark-600);
   --popover-body-box-shadow: var(--box-shadow-z4);
   --popover-body-color: var(--color-ink-inverse-base);
 
   background-color: var(--popover-body-background);
   backdrop-filter: var(--backdrop-filter-blur-lg);
   border-radius: var(--border-radius-base) 0 0 var(--border-radius-base);
-  box-shadow: var(--popover-body-box-shadow);
+  box-shadow: none;
   color: var(--popover-body-color);
   display: flex;
   flex-direction: column;
@@ -18,12 +18,17 @@
   top: 0;
   right: 0;
   bottom: 0;
-  transition: translate var(--duration-sm) var(--easing-base);
+  transition:
+    translate var(--duration-sm) var(--easing-base),
+    box-shadow var(--duration-md) var(--easing-base);
   translate: 100% 0;
   width: calc(100% - var(--size-7));
   z-index: var(--zindex-offcanvas);
 
   &.is-open {
+    box-shadow:
+      var(--box-shadow-z4),
+      0 0 0 101vmax rgba(0, 0, 0, 0.5);
     translate: 0;
   }
 

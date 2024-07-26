@@ -370,17 +370,17 @@
 :where(.header, .search-ui-container, [data-theme='dark']) .popover,
 :where(.header, .search-ui-container, [data-theme='dark']) .tablet\:popover {
   --popover-summary-color: var(--color-ink-inverse-max);
-  --popover-body-background: var(--color-dark-06);
+  --popover-body-background: var(--color-dark-600);
   --popover-body-color: var(--color-ink-inverse-base);
   --icon-chevron-down: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2234%22%20height%3D%2234%22%20viewBox%3D%220%200%2034%2034%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M8.5%2012.75L17%2021.25L25.5%2012.75%22%20stroke%3D%22white%22%20stroke-width%3D%223%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E%0A');
 
   input {
-    --form-control-background-color: var(--color-light-007);
+    --form-control-background-color: var(--color-light-min);
     --form-control-color: var(--color-ink-inverse-base);
   }
 
   .btn {
-    --button-hover: var(--color-light-007);
+    --button-hover: var(--color-light-min);
     --button-color: var(--color-brand-300);
   }
 
