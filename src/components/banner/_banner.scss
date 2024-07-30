@@ -55,7 +55,7 @@
   display: none;
 
   @media only screen and (min-width: 768px) and (min-height: 361px) {
-    background: hsl(var(--h) var(--s) 16% / 0.92);
+    background: var(--color-brand-950);
     border-radius: var(--border-radius-pill);
     color: var(--color-ink-inverse-max);
     display: block;

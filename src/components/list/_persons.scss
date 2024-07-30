@@ -1,0 +1,135 @@
+// -----------------------------------------------------------------------------
+// PERSON LIST
+// -----------------------------------------------------------------------------
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: var(--size-2);
+  padding-bottom: var(--size-1);
+  position: relative;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: var(--size-1);
+
+    &::after {
+      border-bottom: 1px solid var(--color-ink-inverse-border);
+      content: '';
+      position: absolute;
+      bottom: calc(var(--size-half) * -1);
+      right: 0;
+      left: calc(var(--size-line) * 3);
+      height: 0;
+    }
+  }
+}
+
+// Search
+:where(.popover__body) [id='filter-search'] {
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2229%22%20height%3D%2228%22%20viewBox%3D%220%200%2029%2028%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5.62599%2022.3384L4.91913%2023.0457L6.33383%2024.4595L7.04069%2023.7521L5.62599%2022.3384ZM12.2324%2018.5569C12.6227%2018.1662%2012.6225%2017.5331%2012.2319%2017.1427C11.8412%2016.7523%2011.2081%2016.7525%2010.8177%2017.1431L12.2324%2018.5569ZM7.04069%2023.7521L12.2324%2018.5569L10.8177%2017.1431L5.62599%2022.3384L7.04069%2023.7521Z%22%20fill%3D%22white%22%20fill-opacity%3D%220.5%22%2F%3E%3Cpath%20d%3D%22M21.6658%2015.6206C19.16%2018.1265%2015.0971%2018.1265%2012.5913%2015.6206C10.0854%2013.1147%2010.0854%209.05193%2012.5913%206.54607C15.0971%204.0402%2019.16%204.0402%2021.6658%206.54607C24.1717%209.05193%2024.1717%2013.1147%2021.6658%2015.6206Z%22%20stroke%3D%22white%22%20stroke-opacity%3D%220.5%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E%0A');
+  background-position: var(--size-2) 50%;
+  background-repeat: no-repeat;
+  margin-inline-end: var(--padding-x-box);
+  margin-bottom: var(--size-2p5);
+  padding-inline-start: var(--size-7);
+  max-width: calc(100% - var(--size-3));
+}
+
+// All
+:where(.person).is-all {
+  padding-bottom: var(--size-3);
+
+  label {
+    flex-grow: 1;
+  }
+
+  [type='checkbox'] {
+    margin-top: 0;
+  }
+}
+
+// Person
+:where(.person figure) {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: var(--size-2);
+  position: relative;
+
+  img {
+    border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
+    position: relative;
+    z-index: 1;
+  }
+
+  > figure {
+    flex: none;
+
+    &::after {
+      border-radius: var(--border-radius-sm);
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: var(--size-7);
+    }
+  }
+
+  > figcaption {
+    flex-grow: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: var(--size-1);
+    overflow: hidden;
+  }
+}
+
+:where(.person figcaption) > small {
+  color: var(--color-ink-inverse-2ry);
+  display: block;
+  margin-top: calc(var(--size-half) * -1);
+}
+
+:where(.person) > [type='checkbox'] {
+  flex: none;
+  margin-inline-end: 0;
+  margin-top: var(--size-1);
+}
+
+:where(.person.is-democrat) {
+  figure > figure::after {
+    background-color: var(--color-brand-900);
+  }
+
+  [type='checkbox'] {
+    &:checked,
+    &:checked:active,
+    &:checked:focus {
+      --form-control-background-color: var(--color-brand-primary);
+      --form-control-border-color: var(--color-brand-primary);
+    }
+  }
+}
+
+:where(.person.is-republican) {
+  figure > figure::after {
+    background-color: var(--color-brand-2ry);
+  }
+
+  [type='checkbox'] {
+    &:checked,
+    &:checked:active,
+    &:checked:focus {
+      --form-control-background-color: var(--color-brand-2ry);
+      --form-control-border-color: var(--color-brand-2ry);
+    }
+  }
+}
+
+:where(.person.is-independent, .person.is-foreign) {
+  figure > figure::after {
+    background-color: var(--color-neutral-500);
+  }
+}
