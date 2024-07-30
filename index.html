@@ -27,64 +27,291 @@
             </button>
             <div class="popover__body">
               <input id="filter-search" type="search" name="search" autocapitalize="off" autocomplete="off" aria-label="Find a politician" placeholder="Search">
+
               <ul class="popover__content">
                 <li class="person is-all">
                   <label for="filter-all">All</label>
-                  <input id="filter-all" type="checkbox" name="all" checked>
+                  <input id="filter-all" type="checkbox" name="all" checked="checked"/>
                 </li>
                 <li class="person is-democrat">
                   <figure>
-                    <figure class="person__avatar">
-                      <img src="/assets/images/biden.png" srcset="/assets/images/biden.png 1x, /assets/images/biden@2x.png 2x" width="56" height="64" alt="Joe Biden">
-                    </figure>
-                    <figcaption>Joe Biden <small>Democrat</small></figcaption>
+                    <figure class="person__avatar"><img src="/assets/images/biden.png" srcset="/assets/images/biden.png 1x, biden@2x.png 2x" width="56" height="64" alt="Joe Biden"/></figure>
+                    <figcaption>Joe Biden<small>Democrat</small></figcaption>
                   </figure>
-                  <input id="filter-biden" type="checkbox" name="biden" checked>
+                  <input id="filter-biden" type="checkbox" name="biden" checked="checked"/>
                 </li>
                 <li class="person is-republican">
                   <figure>
-                    <figure class="person__avatar">
-                      <img src="/assets/images/trump.png" srcset="/assets/images/trump.png 1x, /assets/images/trump@2x.png 2x" width="56" height="64" alt="Donald Trump">
-                    </figure>
-                    <figcaption>Donald Trump <small>Republican</small></figcaption>
+                    <figure class="person__avatar"><img src="/assets/images/trump.png" srcset="/assets/images/trump.png 1x, trump@2x.png 2x" width="56" height="64" alt="Donald Trump"/></figure>
+                    <figcaption>Donald Trump<small>Republican</small></figcaption>
                   </figure>
-                  <input id="filter-trump" type="checkbox" name="biden" checked>
+                  <input id="filter-trump" type="checkbox" name="trump" checked="checked"/>
                 </li>
                 <li class="person is-democrat">
                   <figure>
-                    <figure class="person__avatar">
-                      <img src="/assets/images/ocasio-cortez.png" srcset="/assets/images/ocasio-cortez.png 1x, /assets/images/ocasio-cortez@2x.png 2x" width="56" height="64" alt="Alexandria Ocasio-Cortez">
-                    </figure>
-                    <figcaption>Alexandria Ocasio-Cortez <small>Democrat</small></figcaption>
+                    <figure class="person__avatar"><img src="/assets/images/harris.png" srcset="/assets/images/harris.png 1x, harris@2x.png 2x" width="56" height="64" alt="Kamala Harris"/></figure>
+                    <figcaption>Kamala Harris<small>Democrat</small></figcaption>
                   </figure>
-                  <input id="filter-ocasio-cortez" type="checkbox" name="biden" checked>
+                  <input id="filter-harris" type="checkbox" name="harris" checked="checked"/>
                 </li>
                 <li class="person is-republican">
                   <figure>
-                    <figure class="person__avatar">
-                      <img src="/assets/images/vance.png" srcset="/assets/images/vance.png 1x, /assets/images/vance@2x.png 2x" width="56" height="64" alt="J.D. Vance">
-                    </figure>
-                    <figcaption>J.D. Vance <small>Republican</small></figcaption>
+                    <figure class="person__avatar"><img src="/assets/images/vance.png" srcset="/assets/images/vance.png 1x, vance@2x.png 2x" width="56" height="64" alt="J.D. Vance"/></figure>
+                    <figcaption>J.D. Vance<small>Republican</small></figcaption>
                   </figure>
-                  <input id="filter-vance" type="checkbox" name="biden" checked>
+                  <input id="filter-vance" type="checkbox" name="vance" checked="checked"/>
                 </li>
                 <li class="person is-democrat">
                   <figure>
-                    <figure class="person__avatar">
-                      <img src="/assets/images/harris.png" srcset="/assets/images/harris.png 1x, /assets/images/harris@2x.png 2x" width="56" height="64" alt="Kamala Harris">
-                    </figure>
-                    <figcaption>Kamala Harris <small>Democrat</small></figcaption>
+                    <figure class="person__avatar"><img src="/assets/images/ocasio-cortez.png" srcset="/assets/images/ocasio-cortez.png 1x, ocasio-cortez@2x.png 2x" width="56" height="64" alt="Alexandria Ocasio-Cortez"/></figure>
+                    <figcaption>Alexandria Ocasio-Cortez<small>Democrat</small></figcaption>
                   </figure>
-                  <input id="filter-harris" type="checkbox" name="biden" checked>
+                  <input id="filter-ocasio-cortez" type="checkbox" name="ocasio-cortez" checked="checked"/>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/obama.png" srcset="/assets/images/obama.png 1x, obama@2x.png 2x" width="56" height="64" alt="Barack Obama"/></figure>
+                    <figcaption>Barack Obama<small>Democrat</small></figcaption>
+                  </figure>
+                  <input id="filter-obama" type="checkbox" name="obama" checked="checked"/>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/clinton.png" srcset="/assets/images/clinton.png 1x, clinton@2x.png 2x" width="56" height="64" alt="Bill Clinton"/></figure>
+                    <figcaption>Bill Clinton<small>Democrat</small></figcaption>
+                  </figure>
+                  <input id="filter-clinton" type="checkbox" name="clinton" checked="checked"/>
                 </li>
                 <li class="person is-republican">
                   <figure>
-                    <figure class="person__avatar">
-                      <img src="/assets/images/rubio.png" srcset="/assets/images/rubio.png 1x, /assets/images/rubio@2x.png 2x" width="56" height="64" alt="Marco Rubio">
-                    </figure>
-                    <figcaption>Marco Rubio <small>Republican</small></figcaption>
+                    <figure class="person__avatar"><img src="/assets/images/romney.png" srcset="/assets/images/romney.png 1x, romney@2x.png 2x" width="56" height="64" alt="Mitt Romney"/></figure>
+                    <figcaption>Mitt Romney<small>Republican</small></figcaption>
                   </figure>
-                  <input id="filter-rubio" type="checkbox" name="biden" checked>
+                  <input id="filter-romney" type="checkbox" name="romney" checked="checked"/>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/sanders.png" srcset="/assets/images/sanders.png 1x, sanders@2x.png 2x" width="56" height="64" alt="Bernie Sanders"/></figure>
+                    <figcaption>Bernie Sanders<small>Democrat</small></figcaption>
+                  </figure>
+                  <input id="filter-sanders" type="checkbox" name="sanders" checked="checked"/>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/warren.png" srcset="/assets/images/warren.png 1x, warren@2x.png 2x" width="56" height="64" alt="Elizabeth Warren"/></figure>
+                    <figcaption>Elizabeth Warren<small>Democrat</small></figcaption>
+                  </figure>
+                  <input id="filter-warren" type="checkbox" name="warren" checked="checked"/>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/pelosi.png" srcset="/assets/images/pelosi.png 1x, pelosi@2x.png 2x" width="56" height="64" alt="Nancy Pelosi"/></figure>
+                    <figcaption>Nancy Pelosi<small>Democrat</small></figcaption>
+                  </figure>
+                  <input id="filter-pelosi" type="checkbox" name="pelosi" checked="checked"/>
+                </li>
+                <li class="person is-republican">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/cruz.png" srcset="/assets/images/cruz.png 1x, cruz@2x.png 2x" width="56" height="64" alt="Ted Cruz"/></figure>
+                    <figcaption>Ted Cruz<small>Republican</small></figcaption>
+                  </figure>
+                  <input id="filter-cruz" type="checkbox" name="cruz" checked="checked"/>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/hillary.png" srcset="/assets/images/hillary.png 1x, hillary@2x.png 2x" width="56" height="64" alt="Hillary Clinton "/></figure>
+                    <figcaption>Hillary Clinton <small>Democrat</small></figcaption>
+                  </figure>
+                  <input id="filter-hillary" type="checkbox" name="hillary" checked="checked"/>
+                </li>
+                <li class="person is-republican">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/bush-jr.png" srcset="/assets/images/bush-jr.png 1x, bush-jr@2x.png 2x" width="56" height="64" alt="George W. Bush"/></figure>
+                    <figcaption>George W. Bush<small>Republican</small></figcaption>
+                  </figure>
+                  <input id="filter-bush-jr" type="checkbox" name="bush-jr" checked="checked"/>
+                </li>
+                <li class="person is-republican">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/reagan.png" srcset="/assets/images/reagan.png 1x, reagan@2x.png 2x" width="56" height="64" alt="Ronald Reagan"/></figure>
+                    <figcaption>Ronald Reagan<small>Republican</small></figcaption>
+                  </figure>
+                  <input id="filter-reagan" type="checkbox" name="reagan" checked="checked"/>
+                </li>
+                <li class="person is-republican">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/rubio.png" srcset="/assets/images/rubio.png 1x, rubio@2x.png 2x" width="56" height="64" alt="Marco Rubio"/></figure>
+                    <figcaption>Marco Rubio<small>Republican</small></figcaption>
+                  </figure>
+                  <input id="filter-rubio" type="checkbox" name="rubio" checked="checked"/>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/gore.png" srcset="/assets/images/gore.png 1x, gore@2x.png 2x" width="56" height="64" alt="Al Gore"/></figure>
+                    <figcaption>Al Gore<small>Democrat</small></figcaption>
+                  </figure>
+                  <input id="filter-gore" type="checkbox" name="gore" checked="checked"/>
+                </li>
+                <li class="person is-republican">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/gingrich.png" srcset="/assets/images/gingrich.png 1x, gingrich@2x.png 2x" width="56" height="64" alt="Newt Gingrich"/></figure>
+                    <figcaption>Newt Gingrich<small>Republican</small></figcaption>
+                  </figure>
+                  <input id="filter-gingrich" type="checkbox" name="gingrich" checked="checked"/>
+                </li>
+                <li class="person is-republican">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/bush-sr.png" srcset="/assets/images/bush-sr.png 1x, bush-sr@2x.png 2x" width="56" height="64" alt="George H.W. Bush"/></figure>
+                    <figcaption>George H.W. Bush<small>Republican</small></figcaption>
+                  </figure>
+                  <input id="filter-bush-sr" type="checkbox" name="bush-sr" checked="checked"/>
+                </li>
+                <li class="person is-republican">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/powell.png" srcset="/assets/images/powell.png 1x, powell@2x.png 2x" width="56" height="64" alt="Colin Powell"/></figure>
+                    <figcaption>Colin Powell<small>Republican</small></figcaption>
+                  </figure>
+                  <input id="filter-powell" type="checkbox" name="powell" checked="checked"/>
+                </li>
+                <li class="person is-republican">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/mccain.png" srcset="/assets/images/mccain.png 1x, mccain@2x.png 2x" width="56" height="64" alt="John McCain"/></figure>
+                    <figcaption>John McCain<small>Republican</small></figcaption>
+                  </figure>
+                  <input id="filter-mccain" type="checkbox" name="mccain" checked="checked"/>
+                </li>
+                <li class="person is-republican">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/ryan.png" srcset="/assets/images/ryan.png 1x, ryan@2x.png 2x" width="56" height="64" alt="Paul Ryan"/></figure>
+                    <figcaption>Paul Ryan<small>Republican</small></figcaption>
+                  </figure>
+                  <input id="filter-ryan" type="checkbox" name="ryan" checked="checked"/>
+                </li>
+                <li class="person is-republican">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/pence.png" srcset="/assets/images/pence.png 1x, pence@2x.png 2x" width="56" height="64" alt="Mike Pence"/></figure>
+                    <figcaption>Mike Pence<small>Republican</small></figcaption>
+                  </figure>
+                  <input id="filter-pence" type="checkbox" name="pence" checked="checked"/>
+                </li>
+                <li class="person is-republican">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/boehner.png" srcset="/assets/images/boehner.png 1x, boehner@2x.png 2x" width="56" height="64" alt="John Boehner"/></figure>
+                    <figcaption>John Boehner<small>Republican</small></figcaption>
+                  </figure>
+                  <input id="filter-boehner" type="checkbox" name="boehner" checked="checked"/>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/kaine.png" srcset="/assets/images/kaine.png 1x, kaine@2x.png 2x" width="56" height="64" alt="Tim Kaine"/></figure>
+                    <figcaption>Tim Kaine<small>Democrat</small></figcaption>
+                  </figure>
+                  <input id="filter-kaine" type="checkbox" name="kaine" checked="checked"/>
+                </li>
+                <li class="person is-republican">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/kasich.png" srcset="/assets/images/kasich.png 1x, kasich@2x.png 2x" width="56" height="64" alt="John Kasich"/></figure>
+                    <figcaption>John Kasich<small>Republican</small></figcaption>
+                  </figure>
+                  <input id="filter-kasich" type="checkbox" name="kasich" checked="checked"/>
+                </li>
+                <li class="person is-republican">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/giuliani.png" srcset="/assets/images/giuliani.png 1x, giuliani@2x.png 2x" width="56" height="64" alt="Rudy Giuliani"/></figure>
+                    <figcaption>Rudy Giuliani<small>Republican</small></figcaption>
+                  </figure>
+                  <input id="filter-giuliani" type="checkbox" name="giuliani" checked="checked"/>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/newsom.png" srcset="/assets/images/newsom.png 1x, newsom@2x.png 2x" width="56" height="64" alt="Gavin Newsom"/></figure>
+                    <figcaption>Gavin Newsom<small>Democrat</small></figcaption>
+                  </figure>
+                  <input id="filter-newsom" type="checkbox" name="newsom" checked="checked"/>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/brown.png" srcset="/assets/images/brown.png 1x, brown@2x.png 2x" width="56" height="64" alt="Jerry Brown"/></figure>
+                    <figcaption>Jerry Brown<small>Democrat</small></figcaption>
+                  </figure>
+                  <input id="filter-brown" type="checkbox" name="brown" checked="checked"/>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/klobuchar.png" srcset="/assets/images/klobuchar.png 1x, klobuchar@2x.png 2x" width="56" height="64" alt="Amy Klobuchar"/></figure>
+                    <figcaption>Amy Klobuchar<small>Democrat</small></figcaption>
+                  </figure>
+                  <input id="filter-klobuchar" type="checkbox" name="klobuchar" checked="checked"/>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/gillibrand.png" srcset="/assets/images/gillibrand.png 1x, gillibrand@2x.png 2x" width="56" height="64" alt="Kirsten Gillibrand"/></figure>
+                    <figcaption>Kirsten Gillibrand<small>Democrat</small></figcaption>
+                  </figure>
+                  <input id="filter-gillibrand" type="checkbox" name="gillibrand" checked="checked"/>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/bloomberg.png" srcset="/assets/images/bloomberg.png 1x, bloomberg@2x.png 2x" width="56" height="64" alt="Michael Bloomberg"/></figure>
+                    <figcaption>Michael Bloomberg<small>Democrat</small></figcaption>
+                  </figure>
+                  <input id="filter-bloomberg" type="checkbox" name="bloomberg" checked="checked"/>
+                </li>
+                <li class="person is-independent">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/king.png" srcset="/assets/images/king.png 1x, king@2x.png 2x" width="56" height="64" alt="Martin Luther King, Jr."/></figure>
+                    <figcaption>Martin Luther King, Jr.<small>Independent</small></figcaption>
+                  </figure>
+                  <input id="filter-king" type="checkbox" name="king" checked="checked"/>
+                </li>
+                <li class="person is-independent">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/musk.png" srcset="/assets/images/musk.png 1x, musk@2x.png 2x" width="56" height="64" alt="Elon Musk"/></figure>
+                    <figcaption>Elon Musk<small>Independent</small></figcaption>
+                  </figure>
+                  <input id="filter-musk" type="checkbox" name="musk" checked="checked"/>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/carter.png" srcset="/assets/images/carter.png 1x, carter@2x.png 2x" width="56" height="64" alt="Jimmy Carter"/></figure>
+                    <figcaption>Jimmy Carter<small>Democrat</small></figcaption>
+                  </figure>
+                  <input id="filter-carter" type="checkbox" name="carter" checked="checked"/>
+                </li>
+                <li class="person is-republican">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/schwarzenegger.png" srcset="/assets/images/schwarzenegger.png 1x, schwarzenegger@2x.png 2x" width="56" height="64" alt="Arnold Schwarzenegger"/></figure>
+                    <figcaption>Arnold Schwarzenegger<small>Republican</small></figcaption>
+                  </figure>
+                  <input id="filter-schwarzenegger" type="checkbox" name="schwarzenegger" checked="checked"/>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/michelle.png" srcset="/assets/images/michelle.png 1x, michelle@2x.png 2x" width="56" height="64" alt="Michelle Obama"/></figure>
+                    <figcaption>Michelle Obama<small>Democrat</small></figcaption>
+                  </figure>
+                  <input id="filter-michelle" type="checkbox" name="michelle" checked="checked"/>
+                </li>
+                <li class="person is-democrat">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/rosalynn.png" srcset="/assets/images/rosalynn.png 1x, rosalynn@2x.png 2x" width="56" height="64" alt="Rosalynn Carter"/></figure>
+                    <figcaption>Rosalynn Carter<small>Democrat</small></figcaption>
+                  </figure>
+                  <input id="filter-rosalynn" type="checkbox" name="rosalynn" checked="checked"/>
+                </li>
+                <li class="person is-republican">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/ivanka.png" srcset="/assets/images/ivanka.png 1x, ivanka@2x.png 2x" width="56" height="64" alt="Ivanka Trump"/></figure>
+                    <figcaption>Ivanka Trump<small>Republican</small></figcaption>
+                  </figure>
+                  <input id="filter-ivanka" type="checkbox" name="ivanka" checked="checked"/>
+                </li>
+                <li class="person is-foreign">
+                  <figure>
+                    <figure class="person__avatar"><img src="/assets/images/zelenskyy.png" srcset="/assets/images/zelenskyy.png 1x, zelenskyy@2x.png 2x" width="56" height="64" alt="Volodymyr Zelenskyy"/></figure>
+                    <figcaption>Volodymyr Zelenskyy<small>Foreign</small></figcaption>
+                  </figure>
+                  <input id="filter-zelenskyy" type="checkbox" name="zelenskyy" checked="checked"/>
                 </li>
               </ul>
               <div class="popover__footer">
