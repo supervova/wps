@@ -1,0 +1,204 @@
+{
+  "persons": [
+    {
+      "name": "Joe Biden",
+      "party": "Democrat",
+      "id": "biden"
+    },
+    {
+      "name": "Donald Trump",
+      "party": "Republican",
+      "id": "trump"
+    },
+    {
+      "name": "Kamala Harris",
+      "party": "Democrat",
+      "id": "harris"
+    },
+    {
+      "name": "J.D. Vance",
+      "party": "Republican",
+      "id": "vance"
+    },
+    {
+      "name": "Alexandria Ocasio-Cortez",
+      "party": "Democrat",
+      "id": "ocasio-cortez"
+    },
+    {
+      "name": "Barack Obama",
+      "party": "Democrat",
+      "id": "obama"
+    },
+    {
+      "name": "Bill Clinton",
+      "party": "Democrat",
+      "id": "clinton"
+    },
+    {
+      "name": "Mitt Romney",
+      "party": "Republican",
+      "id": "romney"
+    },
+    {
+      "name": "Bernie Sanders",
+      "party": "Democrat",
+      "id": "sanders"
+    },
+    {
+      "name": "Elizabeth Warren",
+      "party": "Democrat",
+      "id": "warren"
+    },
+    {
+      "name": "Nancy Pelosi",
+      "party": "Democrat",
+      "id": "pelosi"
+    },
+    {
+      "name": "Ted Cruz",
+      "party": "Republican",
+      "id": "cruz"
+    },
+    {
+      "name": "Hillary Clinton ",
+      "party": "Democrat",
+      "id": "hillary"
+    },
+    {
+      "name": "George W. Bush",
+      "party": "Republican",
+      "id": "bush-jr"
+    },
+    {
+      "name": "Ronald Reagan",
+      "party": "Republican",
+      "id": "reagan"
+    },
+    {
+      "name": "Marco Rubio",
+      "party": "Republican",
+      "id": "rubio"
+    },
+    {
+      "name": "Al Gore",
+      "party": "Democrat",
+      "id": "gore"
+    },
+    {
+      "name": "Newt Gingrich",
+      "party": "Republican",
+      "id": "gingrich"
+    },
+    {
+      "name": "George H.W. Bush",
+      "party": "Republican",
+      "id": "bush-sr"
+    },
+    {
+      "name": "Colin Powell",
+      "party": "Republican",
+      "id": "powell"
+    },
+    {
+      "name": "John McCain",
+      "party": "Republican",
+      "id": "mccain"
+    },
+    {
+      "name": "Paul Ryan",
+      "party": "Republican",
+      "id": "ryan"
+    },
+    {
+      "name": "Mike Pence",
+      "party": "Republican",
+      "id": "pence"
+    },
+    {
+      "name": "John Boehner",
+      "party": "Republican",
+      "id": "boehner"
+    },
+    {
+      "name": "Tim Kaine",
+      "party": "Democrat",
+      "id": "kaine"
+    },
+    {
+      "name": "John Kasich",
+      "party": "Republican",
+      "id": "kasich"
+    },
+    {
+      "name": "Rudy Giuliani",
+      "party": "Republican",
+      "id": "giuliani"
+    },
+    {
+      "name": "Gavin Newsom",
+      "party": "Democrat",
+      "id": "newsom"
+    },
+    {
+      "name": "Jerry Brown",
+      "party": "Democrat",
+      "id": "brown"
+    },
+    {
+      "name": "Amy Klobuchar",
+      "party": "Democrat",
+      "id": "klobuchar"
+    },
+    {
+      "name": "Kirsten Gillibrand",
+      "party": "Democrat",
+      "id": "gillibrand"
+    },
+    {
+      "name": "Michael Bloomberg",
+      "party": "Democrat",
+      "id": "bloomberg"
+    },
+    {
+      "name": "Martin Luther King, Jr.",
+      "party": "Independent",
+      "id": "king"
+    },
+    {
+      "name": "Elon Musk",
+      "party": "Independent",
+      "id": "musk"
+    },
+    {
+      "name": "Jimmy Carter",
+      "party": "Democrat",
+      "id": "carter"
+    },
+    {
+      "name": "Arnold Schwarzenegger",
+      "party": "Republican",
+      "id": "schwarzenegger"
+    },
+    {
+      "name": "Michelle Obama",
+      "party": "Democrat",
+      "id": "michelle"
+    },
+    {
+      "name": "Rosalynn Carter",
+      "party": "Democrat",
+      "id": "rosalynn"
+    },
+    {
+      "name": "Ivanka Trump",
+      "party": "Republican",
+      "id": "ivanka"
+    },
+    {
+      "name": "Volodymyr Zelenskyy",
+      "party": "Foreign",
+      "id": "zelenskyy"
+    },
+  ]
+}

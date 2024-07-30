@@ -1,0 +1,12 @@
+ul.popover__content
+  li.person.is-all
+    label(for="filter-all") All
+    input#filter-all(type="checkbox" name="all" checked)
+  each person in persons
+    li.person(class=`is-${person.party.toLowerCase()}`)
+      figure
+        figure.person__avatar
+          img(src=`/src/assets/images/persons/${person.id}.png` srcset=`/src/assets/images/persons/${person.id}.png 1x, ${person.id}@2x.png 2x` width="56" height="64" alt=person.name)
+        figcaption= person.name
+          small= person.party
+      input(id=`filter-${person.id}` type="checkbox" name=person.id checked)

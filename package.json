@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "pug": "pug --pretty -O ./src/components/$COMPONENT/data.json ./src/components/$COMPONENT/template.pug -o ./src/components/$COMPONENT && mv ./src/components/$COMPONENT/template.html ./src/components/$COMPONENT/output.html"
   },
   "stylelint": {
     "extends": [
