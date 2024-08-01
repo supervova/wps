@@ -1,7 +1,7 @@
 @use 'sass:math';
 
 .drawer {
-  --popover-body-background: var(--color-dark-600);
+  --popover-body-background: var(--color-ink-2ry);
   --popover-body-box-shadow: var(--box-shadow-z4);
   --popover-body-color: var(--color-ink-inverse-base);
 
@@ -23,7 +23,7 @@
     box-shadow var(--duration-md) var(--easing-base);
   translate: 100% 0;
   width: calc(100% - var(--size-7));
-  z-index: var(--zindex-offcanvas);
+  z-index: var(--zindex-drawer);
 
   &.is-open {
     box-shadow:
@@ -142,7 +142,7 @@
   z-index: 1;
 
   > .btn:first-of-type {
-    color: var(--color-brand-300);
+    color: var(--color-brand-text-inverse);
   }
 
   @media only screen and (min-width: 768px) {

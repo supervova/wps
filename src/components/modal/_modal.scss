@@ -1,0 +1,174 @@
+/* -----------------------------------------------------------------------------
+ * BASE
+ * -------------------------------------------------------------------------- */
+// #region
+
+// The <dialog> itself fulfills the role of a wrapper
+/* dialog */
+.modal {
+  --modal-background: var(--color-ink-2ry);
+  --modal-border-radius: var(--border-radius-base);
+  --modal-padding-x: var(--padding-x-box);
+
+  background: transparent;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  opacity: 1;
+  position: fixed;
+  inset: 0;
+  transition:
+    display var(--duration-md) var(--easing-base),
+    opacity var(--duration-md) var(--easing-base);
+  transition-behavior: allow-discrete;
+  width: inherit;
+  min-width: 100%;
+  height: inherit;
+  min-height: 100%;
+
+  // Closed state
+  &:not([open]),
+  &[open='false'] {
+    display: none;
+    opacity: 0;
+  }
+
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+.modal__base,
+.modal article {
+  background: var(--modal-background);
+  backdrop-filter: var(--backdrop-filter-blur-lg);
+  border-radius: var(--modal-border-radius) var(--modal-border-radius) 0 0;
+  box-shadow: var(--box-shadow-z5);
+  display: flex;
+  flex-direction: column;
+  margin: auto auto 0;
+  padding: 0;
+  overflow-y: auto;
+  opacity: 1;
+  overscroll-behavior-y: contain;
+  position: fixed;
+  inset: 0;
+  transition:
+    translate var(--duration-md) var(--easing-base),
+    opacity var(--duration-md) var(--easing-base);
+  translate: 0;
+  width: min(100%, var(--width-lg));
+  max-height: calc(100% - var(--size-5));
+
+  @starting-style {
+    translate: 0 50%;
+  }
+
+  @media (pointer: coarse) {
+    scrollbar-gutter: stable both-edges;
+  }
+
+  @media only screen and (min-width: 768px) and (min-height: 341px) {
+    border-radius: var(--modal-border-radius);
+    border-top-width: var(--size-2);
+    margin-bottom: auto;
+    height: max-content;
+    max-height: calc(100vh - var(--size-8));
+
+    @starting-style {
+      translate: 0 -50%;
+    }
+  }
+}
+
+.modal:not([open]) .modal__base,
+.modal[open='false'] .modal__base {
+  translate: 0 50%;
+
+  @media only screen and (min-width: 768px) and (min-height: 341px) {
+    translate: 0 -50%;
+  }
+}
+
+// SIZES
+.modal.is-sm {
+  border-radius: var(--modal-border-radius);
+  margin-bottom: auto;
+  width: min(calc(100vw - var(--size-4)), var(--width-base));
+}
+
+// Large
+.modal.is-lg {
+  @media only screen and (min-width: 768px) and (min-height: 341px) {
+    width: var(--width-xl);
+  }
+}
+
+// BACKDROP
+// The elements of the top-level do not have access to root custom properties
+.modal:modal::backdrop {
+  background-color: var(--color-background-scrim);
+  // pointer-events: none;
+}
+
+@supports not (selector(:modal)) {
+  .modal::backdrop {
+    background-color: var(--color-background-scrim);
+  }
+}
+// #endregion
+
+/* -----------------------------------------------------------------------------
+ * SECTIONING
+ * -------------------------------------------------------------------------- */
+// #region
+.modal__header {
+  padding-block: var(--size-2p5) var(--size-1p5);
+  padding-inline: var(--size-2p5);
+
+  > :is(h2, h3, h4) {
+    color: var(--color-ink-inverse-base);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+  }
+
+  @media only screen and (min-width: 768px) and (min-height: 341px) {
+    padding-block: var(--size-3) var(--size-2);
+    padding-inline: var(--size-4);
+  }
+}
+
+.modal__body {
+  padding-inline: var(--size-1p5);
+
+  @media only screen and (min-width: 768px) and (min-height: 341px) {
+    padding-inline: var(--size-2);
+  }
+}
+
+.modal__footer {
+  display: flex;
+  justify-content: space-between;
+  padding-block: var(--size-1);
+  padding-inline: var(--size-1p5);
+
+  @media only screen and (min-width: 768px) and (min-height: 341px) {
+    padding-bottom: var(--size-2);
+    padding-inline: var(--size-2);
+  }
+}
+
+.modal__footer .btn {
+  --button-background: transparent;
+  --button-color: var(--color-ink-inverse-base);
+  --button-hover: var(--color-ink-inverse-border);
+  --button-padding-x: var(--size-2);
+}
+
+.modal__footer .btn.is-submit {
+  --button-color: var(--color-brand-text-inverse);
+}
+// #endregion
+

@@ -100,7 +100,7 @@
 
 :where(.person.is-democrat) {
   figure > figure::after {
-    background-color: var(--color-brand-900);
+    background-color: var(--color-brand-primary);
   }
 
   [type='checkbox'] {
@@ -130,6 +130,6 @@
 
 :where(.person.is-independent, .person.is-foreign) {
   figure > figure::after {
-    background-color: var(--color-neutral-500);
+    background-color: var(--color-neutral);
   }
 }

@@ -4,6 +4,7 @@ import {
   handleEscapeKey,
 } from './components/popover/popover';
 import initDrawer from './components/drawer/drawer';
+import initModals from './components/modal/modal';
 
 document.addEventListener('DOMContentLoaded', () => {
   const popovers = document.querySelectorAll('.popover');
@@ -61,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   setupPopovers();
+  initModals();
 
   window.addEventListener('resize', () => {
     // eslint-disable-next-line no-shadow

@@ -6,7 +6,7 @@
 // #region
 
 :root {
-  // Primitive Colors
+  // COLORS
   --h-blue:    210;
   --h-green:   120;
   --h-red:     0;
@@ -18,53 +18,9 @@
   --h:         var(--h-blue);
   --l:         20%;
 
-  --color-neutral-darkest:  hsl(0 0% 8%);
-  --color-neutral-950:      hsl(0 0% 15%);
-  --color-neutral-900:      hsl(0 0% 24%);
-  --color-neutral-800:      hsl(0 0% 27%);
-  --color-neutral-700:      hsl(0 0% 31%);
-  --color-neutral-600:      hsl(0 0% 36%);
-  --color-neutral-500:      hsl(0 0% 43%);
-  --color-neutral-400:      hsl(0 0% 50%);
-  --color-neutral-300:      hsl(0 0% 69%);
-  --color-neutral-200:      hsl(0 0% 82%);
-  --color-neutral-100:      hsl(0 0% 91%);
-  --color-neutral-50:       hsl(0 0% 96%);
-  --color-neutral-lightest: hsl(0 0% 99%);
-
-  --color-dark-max: rgb(0 0 0);
-  --color-dark-900: rgb(0 0 0 / 0.87);
-  --color-dark-600: rgb(0 0 0 / 0.6);
-  --color-dark-400: rgb(0 0 0 / 0.38);
-  --color-dark-200: rgb(0 0 0 / 0.2);
-  --color-dark-100: rgb(0 0 0 / 0.12);
-  --color-dark-min: rgb(0 0 0 / 0.04);
-
-  --color-light-max:  hsl(0 0% 100%);
-  --color-light-900:  hsl(0 0% 100% / 0.87);
-  --color-light-700:  hsl(0 0% 100% / 0.7);
-  --color-light-600:  hsl(0 0% 100% / 0.6);
-  --color-light-min0: hsl(0 0% 100% / 0.54);
-  --color-light-400:  hsl(0 0% 100% / 0.38);
-  --color-light-200:  hsl(0 0% 100% / 0.2);
-  --color-light-100:  hsl(0 0% 100% / 0.12);
-  --color-light-min:  hsl(0 0% 100% / 0.07);
-
-  --color-brand-50:  hsl(var(--h) var(--s) 97%);
-  --color-brand-100: hsl(var(--h) var(--s) 93%);
-  --color-brand-200: hsl(var(--h) var(--s) 85%);
-  --color-brand-300: hsl(var(--h) var(--s) 71%);
-  --color-brand-400: hsl(var(--h) var(--s) 61%);
-  --color-brand-500: hsl(var(--h) var(--s) 50%);
-  --color-brand-600: hsl(var(--h) var(--s) 44%);
-  --color-brand-700: hsl(var(--h) var(--s) 35%);
-  --color-brand-800: hsl(var(--h) var(--s) 29%);
-  --color-brand-900: hsl(var(--h) var(--s) var(--l));
-  --color-brand-950: hsl(var(--h) var(--s) 16%);
-
-  // Functional Colors
-  --color-brand-primary: var(--color-brand-900);
-  --color-brand-2ry:     hsl(var(--h-red) var(--s) 37%);
+  --color-brand-primary:      hsl(var(--h) var(--s) var(--l));
+  --color-brand-2ry:          hsl(var(--h-red) var(--s) 37%);
+  --color-brand-text-inverse: hsl(var(--h) var(--s) 71%);
   --color-brand-gradient-rb:
     hsl(0 100% 37%),
     hsl(348 100% 37%) 21%,
@@ -77,27 +33,35 @@
     hsl(232 46% 30%) 79%,
     hsl(210 100% 20%);
 
-  --color-background-base:          var(--color-neutral-50);
-  --color-background-2ry:           var(--color-neutral-100);
+  --color-background-base:          hsl(0 0% 96%);
+  --color-background-2ry:           hsl(0 0% 91%);
+  --color-background-inverse:       hsl(0 0% 24%);
   --color-background-frosted-glass: hsl(0 0% 96% / 0.8);
   --backdrop-filter-blur:           #{saturate(180%) blur(20px)};
   --backdrop-filter-blur-lg:        #{saturate(180%) blur(50px)};
+  --color-background-scrim:         var(--color-ink-3ry);
 
-  --color-ink-base:   var(--color-dark-900);
-  --color-ink-2ry:    var(--color-dark-600);
-  --color-ink-3ry:    var(--color-dark-400);
-  --color-ink-border: var(--color-dark-100);
+  --color-ink-base:   rgb(0 0 0 / 0.87);
+  --color-ink-2ry:    rgb(0 0 0 / 0.6);
+  --color-ink-3ry:    rgb(0 0 0 / 0.38);
+  --color-ink-border: rgb(0 0 0 / 0.12);
   --color-ink-shadow: 0 0 0;
   --color-ink-min:    rgb(var(--color-ink-shadow) / 0.04);
   --color-ink-link:   hsl(var(--h) var(--s) 54%);
 
-  --color-ink-inverse-max:    var(--color-light-max);
-  --color-ink-inverse-base:   var(--color-light-700);
-  --color-ink-inverse-2ry:    var(--color-light-min0);
-  --color-ink-inverse-3ry:    var(--color-light-400);
-  --color-ink-inverse-border: var(--color-light-100);
-  --color-ink-inverse-min:    var(--color-light-min);
+  --color-ink-icon:   var(--color-ink-inverse-2ry);
 
+  --color-ink-inverse-max:    hsl(0 0% 100%);
+  --color-ink-inverse-900:    hsl(0 0% 100% / 0.87);
+  --color-ink-inverse-base:   hsl(0 0% 100% / 0.7);
+  --color-ink-inverse-2ry:    hsl(0 0% 100% / 0.54);
+  --color-ink-inverse-3ry:    hsl(0 0% 100% / 0.38);
+  --color-ink-inverse-border: hsl(0 0% 100% / 0.12);
+  --color-ink-inverse-min:    hsl(0 0% 100% / 0.07);
+
+  --color-neutral: hsl(0 0% 43%);
+
+  // SPACING
   --size-half: #{math.div(4, 16)}rem;
   --size-1:    #{math.div(8, 16)}rem;
   --size-1p5:  #{math.div(12, 16)}rem;
@@ -111,6 +75,7 @@
   --size-8:    #{math.div(64, 16)}rem;
   --size-line: var(--size-3);
 
+  // TYPOGRAPHY
   --font-family-base:
     Roboto,
    -apple-system,
@@ -130,6 +95,7 @@
   --font-size-small:     #{math.div(12, 16)}rem;
   --line-height-small:   #{math.div(16, 12)};
 
+  // BOXES
   --padding-x-box: var(--size-2);
 
   // Rectangular Images
@@ -205,9 +171,10 @@
   --zindex-fab:     30;
   --zindex-popover: 40;
   --zindex-tooltip: 50;
-  --zindex-offcanvas: 60;
+  --zindex-drawer:  60;
+  --zindex-modal:   70;
 
-
+  // MOTION DESIGN
   // Micro-interactions such as button and toggle
   --duration-xxs: 0.07s;
 
@@ -231,14 +198,16 @@
   --easing-disappearance: cubic-bezier(0.2, 0, 1, 0.9);
   --easing-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-  --scrollbar-track: var(--color-dark-100);
-  --scrollbar-thumb: var(--color-dark-200);
+  --scrollbar-track: rgb(0 0 0 / 0.12);
+  --scrollbar-thumb: rgb(0 0 0 / 0.2);
   --scrollbar-thumb-size: var(--size-1p5);
 
+  // COMPONENTS
   --height-btn: var(--size-5);
 
   --icon-calendar-light: url('data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%2022C4.45%2022%203.97917%2021.8042%203.5875%2021.4125C3.19583%2021.0208%203%2020.55%203%2020V6C3%205.45%203.19583%204.97917%203.5875%204.5875C3.97917%204.19583%204.45%204%205%204H6V2H8V4H16V2H18V4H19C19.55%204%2020.0208%204.19583%2020.4125%204.5875C20.8042%204.97917%2021%205.45%2021%206V20C21%2020.55%2020.8042%2021.0208%2020.4125%2021.4125C20.0208%2021.8042%2019.55%2022%2019%2022H5ZM5%2020H19V10H5V20ZM5%208H19V6H5V8ZM12%2014C11.7167%2014%2011.4792%2013.9042%2011.2875%2013.7125C11.0958%2013.5208%2011%2013.2833%2011%2013C11%2012.7167%2011.0958%2012.4792%2011.2875%2012.2875C11.4792%2012.0958%2011.7167%2012%2012%2012C12.2833%2012%2012.5208%2012.0958%2012.7125%2012.2875C12.9042%2012.4792%2013%2012.7167%2013%2013C13%2013.2833%2012.9042%2013.5208%2012.7125%2013.7125C12.5208%2013.9042%2012.2833%2014%2012%2014ZM8%2014C7.71667%2014%207.47917%2013.9042%207.2875%2013.7125C7.09583%2013.5208%207%2013.2833%207%2013C7%2012.7167%207.09583%2012.4792%207.2875%2012.2875C7.47917%2012.0958%207.71667%2012%208%2012C8.28333%2012%208.52083%2012.0958%208.7125%2012.2875C8.90417%2012.4792%209%2012.7167%209%2013C9%2013.2833%208.90417%2013.5208%208.7125%2013.7125C8.52083%2013.9042%208.28333%2014%208%2014ZM16%2014C15.7167%2014%2015.4792%2013.9042%2015.2875%2013.7125C15.0958%2013.5208%2015%2013.2833%2015%2013C15%2012.7167%2015.0958%2012.4792%2015.2875%2012.2875C15.4792%2012.0958%2015.7167%2012%2016%2012C16.2833%2012%2016.5208%2012.0958%2016.7125%2012.2875C16.9042%2012.4792%2017%2012.7167%2017%2013C17%2013.2833%2016.9042%2013.5208%2016.7125%2013.7125C16.5208%2013.9042%2016.2833%2014%2016%2014ZM12%2018C11.7167%2018%2011.4792%2017.9042%2011.2875%2017.7125C11.0958%2017.5208%2011%2017.2833%2011%2017C11%2016.7167%2011.0958%2016.4792%2011.2875%2016.2875C11.4792%2016.0958%2011.7167%2016%2012%2016C12.2833%2016%2012.5208%2016.0958%2012.7125%2016.2875C12.9042%2016.4792%2013%2016.7167%2013%2017C13%2017.2833%2012.9042%2017.5208%2012.7125%2017.7125C12.5208%2017.9042%2012.2833%2018%2012%2018ZM8%2018C7.71667%2018%207.47917%2017.9042%207.2875%2017.7125C7.09583%2017.5208%207%2017.2833%207%2017C7%2016.7167%207.09583%2016.4792%207.2875%2016.2875C7.47917%2016.0958%207.71667%2016%208%2016C8.28333%2016%208.52083%2016.0958%208.7125%2016.2875C8.90417%2016.4792%209%2016.7167%209%2017C9%2017.2833%208.90417%2017.5208%208.7125%2017.7125C8.52083%2017.9042%208.28333%2018%208%2018ZM16%2018C15.7167%2018%2015.4792%2017.9042%2015.2875%2017.7125C15.0958%2017.5208%2015%2017.2833%2015%2017C15%2016.7167%2015.0958%2016.4792%2015.2875%2016.2875C15.4792%2016.0958%2015.7167%2016%2016%2016C16.2833%2016%2016.5208%2016.0958%2016.7125%2016.2875C16.9042%2016.4792%2017%2016.7167%2017%2017C17%2017.2833%2016.9042%2017.5208%2016.7125%2017.7125C16.5208%2017.9042%2016.2833%2018%2016%2018Z%22%20fill%3D%22white%22%20fill-opacity%3D%220.6%22%2F%3E%3C%2Fsvg%3E');
   --icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  --icon-sm-chevron-up-down: url("data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10%2017L6.625%2013.625L7.6875%2012.5625L10%2014.875L12.3125%2012.5625L13.375%2013.625L10%2017ZM7.6875%207.4375L6.625%206.375L10%203L13.375%206.375L12.3125%207.4375L10%205.125L7.6875%207.4375Z%22%20fill%3D%22white%22%20fill-opacity%3D%220.6%22%2F%3E%3C%2Fsvg%3E%0A");
 
   --popover-body-background: var(--color-background-frosted-glass);
 
@@ -279,8 +248,9 @@ h4,
 
 // A elements that don’t have a class get default styles
 a:not([class]) {
-  text-decoration-skip-ink: auto;
   color: var(--color-ink-link);
+  text-decoration-skip-ink: auto;
+  text-underline-offset: 0.15em;
 }
 
 // Avoid text overflows
@@ -536,8 +506,8 @@ input:not([type='checkbox']):not([type='radio']):not([type='range']) {
   &:checked,
   &:checked:active,
   &:checked:focus {
-    --form-control-background-color: var(--color-neutral-500);
-    --form-control-border-color: var(--color-neutral-500);
+    --form-control-background-color: var(--color-neutral);
+    --form-control-border-color: var(--color-neutral);
 
     background-image: var(--icon-checkbox);
     background-position: center;
@@ -555,7 +525,7 @@ input:not([type='checkbox']):not([type='radio']):not([type='range']) {
 .btn {
   --button-background: var(--color-ink-min);
   --button-color: inherit;
-  --button-hover: var(--color-brand-100);
+  --button-hover: hsl(var(--h) var(--s) calc(var(--l) + 73%));
   --button-padding-x: var(--size-2p5);
 
   appearance: button;
@@ -638,6 +608,36 @@ input:not([type='checkbox']):not([type='radio']):not([type='range']) {
   white-space: nowrap;
   width: 1px;
   height: 1px;
+}
+
+// Bootstrap utilities
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+// It's not bootstrap one, but
+.grow {
+  flex-grow: 1;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.p-1 {
+  padding: .25rem;
+}
+
+.px-3 {
+  padding-inline: 1rem;
 }
 // #endregion
 
@@ -731,4 +731,37 @@ input:not([type='checkbox']):not([type='radio']):not([type='range']) {
   height: calc(var(--size-3) * 3);
   z-index: var(--zindex-fixed);
 }
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.video-overlay-menu {
+  height: 100%;
+
+  @media only screen and (min-width: 768px) and (min-height: 341px) {
+    padding-bottom: math.div(120, 16) * 1rem;
+  }
+}
+
+.side-container-flex {
+  flex-grow: 1;
+}
+
+.overlay-play-icon {
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-play-icon .material-symbols-outlined {
+  color: #fff;
+  font-size: math.div(70, 16) * 1rem;
+  opacity: 0.5;
+
+  @media only screen and (min-width: 768px) and (min-height: 341px) {
+    font-size: math.div(175, 16) * 1rem;
+  }
+}
+
 // #endregion

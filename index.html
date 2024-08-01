@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>What Politics Say — Search for the Truth</title>
     <link rel="stylesheet" href="/src/global.scss">
     <link rel="stylesheet" href="/src/update.scss">
@@ -392,6 +392,91 @@
     </header>
 
     <div class="video-player-container">
+      <div class="video-overlay stopped cursor-none">
+        <div class="video-overlay-menu d-flex flex-column">
+
+          <!-- PLAY AND MENU -->
+          <div class="grow video-overlay-stopped d-flex">
+            <div class="side-container-flex">
+              <div class="common-phrases-container side-container"></div>
+            </div>
+            <div class="overlay-play-icon d-flex flex-column align-items-center">
+              <span class="material-symbols-outlined">
+                play_circle
+              </span>
+            </div>
+            <div class="side-container-flex">
+              <div id="side-menu" class="side-container"><!-- Меню --></div>
+            </div>
+          </div>
+
+          <div>
+            <!-- KARAOKE -->
+          </div>
+
+          <!-- ACTIONS -->
+          <!-- <div class="d-flex p-1 px-3"><div><span class="overlay-video-info hand-cursor">Download video</span></div><div><a href="#" class="overlay-video-info">Kiss of the Spider Woman (1985) [00:16:20]</a></div></div> -->
+          <ul class="video-overlay__footer">
+
+            <li>
+              <span class="overlay-video-info hand-cursor">
+                <span class="material-symbols-outlined">download</span>
+                <span class="video-overlay__label">Download video</span>
+              </span>
+            </li>
+
+            <li class="popover is-up has-menu" data-theme="dark">
+              <button class="popover__summary" type="button">
+                <span class="material-symbols-outlined">ios_share</span>
+                <span class="video-overlay__label">Share the video</span>
+              </button>
+
+              <ul class="popover__body menu">
+                <li>
+                  <a class="menu__item" href="javascript:void(0)">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke="var(--color-ink-icon)" d="M10 14C10.3259 14.3326 10.7148 14.5968 11.1441 14.7772C11.5734 14.9576 12.0344 15.0505 12.5 15.0505C12.9656 15.0505 13.4266 14.9576 13.8559 14.7772C14.2851 14.5968 14.6741 14.3326 15 14L19 10C19.663 9.33697 20.0355 8.43769 20.0355 7.50001C20.0355 6.56233 19.663 5.66305 19 5.00001C18.337 4.33697 17.4377 3.96448 16.5 3.96448C15.5623 3.96448 14.663 4.33697 14 5.00001L13.5 5.50001M14 10C13.6741 9.66741 13.2851 9.40318 12.8559 9.2228C12.4266 9.04241 11.9656 8.9495 11.5 8.9495C11.0344 8.9495 10.5734 9.04241 10.1441 9.2228C9.71484 9.40318 9.32587 9.66741 9 10L5 14C4.33695 14.6631 3.96446 15.5623 3.96446 16.5C3.96446 17.4377 4.33695 18.337 5 19C5.66304 19.6631 6.56231 20.0355 7.5 20.0355C8.43768 20.0355 9.33695 19.6631 10 19L10.5 18.5" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                    </svg>
+                    Соpy link
+                  </a>
+                </li>
+                <li>
+                  <a class="menu__item" href="javascript:void(0)">
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke="var(--color-ink-icon)" d="M21.61 5.81322L14.4305 12.9927C13.6495 13.7737 12.3831 13.7738 11.6021 12.9927L4.40395 5.79457M10.7959 12.1865L4.57702 18.4054M15.2367 12.1865L21.4391 18.3889M21.4391 18.3889C21.7864 18.0292 22 17.5395 22 17V7C22 5.89543 21.1046 5 20 5H6C4.89543 5 4 5.89543 4 7V17C4 17.5478 4.22025 18.0442 4.57702 18.4054M21.4391 18.3889C21.0753 18.7657 20.565 19 20 19H6C5.44324 19 4.93962 18.7725 4.57702 18.4054" stroke-width="2"/>
+                    </svg>
+                    Share via email
+                  </a>
+                </li>
+                <li>
+                  <a class="menu__item" href="javascript:void(0)">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke="var(--color-ink-icon)" stroke-width="2" d="M10.9139 12.9709L5 20H5.1L10.9688 13.0233M13.4385 10.1553L18.6 4H18.5L13.3801 10.107M4 4H9L20.5 20H15.5L4 4Z" />
+                    </svg>
+                    X.com
+                  </a>
+                </li>
+                <li>
+                  <a class="menu__item" href="javascript:void(0)">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="var(--color-ink-icon)" d="M5 2C3.34315 2 2 3.34315 2 5V19C2 20.6569 3.34315 22 5 22H19C20.6569 22 22 20.6569 22 19V5C22 3.34315 20.6569 2 19 2H5ZM14.9771 13V21H12V13H9V10H12V8.08715C12 5.34858 13.5157 3.85715 15.98 3.85715C17.1603 3.85715 17.99 3.94458 18.2857 3.98315V6.84515L16.5766 6.846C15.2364 6.846 14.9771 7.47729 14.9771 8.40386V10H18.173L17.7569 13H14.9771Z" />
+                    </svg>
+                    Facebook
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <span class="overlay-video-info hand-cursor">
+                Donald Trump
+                <span class="video-overlay__label">Butler , Jul 13 2024(00:51:17)</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
     </div>
 
     <hr class="phone:spacer">
@@ -429,29 +514,102 @@
     <hr class="phone:spacer">
 
     <footer class="search-ui-container">
-      <div class="popover is-up is-right">
+      <div class="popover is-up is-right has-menu">
         <button class="popover__summary" type="button">
           <span class="material-symbols-outlined"> more_horiz </span>
           <span class="visually-hidden">More</span>
         </button>
-        <div class="popover__body">
-          <ul class="popover__content menu">
-            <li>
-              <a class="menu__item" href="javascript:void(0)">
-                <span class="material-symbols-outlined is-base"> keyboard </span>
-                Keyboard Shortcut
-              </a>
-            </li>
-            <li>
-              <a class="menu__item" href="javascript:void(0)">
-                <span class="material-symbols-outlined is-base"> settings </span>
-                Settings
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul class="popover__body menu">
+          <li>
+            <a class="menu__item" href="javascript:void(0)">
+              <span class="material-symbols-outlined is-base"> keyboard </span>
+              Keyboard Shortcut
+            </a>
+          </li>
+          <li>
+            <button class="menu__item" type="button" data-target="modal-settings">
+              <span class="material-symbols-outlined is-base"> settings </span>
+              Settings
+            </button>
+          </li>
+        </ul>
       </div>
     </footer>
+
+    <dialog class="modal" id="modal-settings">
+      <form class="modal__base form is-settings">
+        <header class="modal__header">
+          <h2>Settings</h2>
+        </header>
+        <div class="modal__body">
+          <p class="form__field">
+            <label for="settings-subtitles">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="var(--color-ink-icon)" d="M6 16H14V14H6V16ZM16 16H18V14H16V16ZM4 20C3.45 20 2.97917 19.8042 2.5875 19.4125C2.19583 19.0208 2 18.55 2 18V6C2 5.45 2.19583 4.97917 2.5875 4.5875C2.97917 4.19583 3.45 4 4 4H20C20.55 4 21.0208 4.19583 21.4125 4.5875C21.8042 4.97917 22 5.45 22 6V18C22 18.55 21.8042 19.0208 21.4125 19.4125C21.0208 19.8042 20.55 20 20 20H4ZM4 18H20V6H4V18Z" />
+              </svg>
+              Show subtitles
+            </label>
+            <select id="settings-subtitles" name="subtitles">
+              <option value="always" selected>Always</option>
+              <option value="pause">When Video Paused</option>
+              <option value="never">Never Show</option>
+            </select>
+          </p>
+          <p class="form__field">
+            <label for="settings-lang-dir">
+              <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="var(--color-ink-icon)" fill-rule="evenodd" clip-rule="evenodd" d="M15 22h6v-2h-2.425a12.345 12.345 0 0 0 1.838-3.8A15.17 15.17 0 0 0 21 12a15.17 15.17 0 0 0-.587-4.2A12.345 12.345 0 0 0 18.575 4H21V2h-6v6h2V5.225c.7 1 1.208 2.08 1.525 3.238C18.842 9.62 19 10.8 19 12c0 1.2-.158 2.38-.475 3.537A10.384 10.384 0 0 1 17 18.776V16h-2v6zM3.438 21.256c.124.192.229.388.312.588.767-.184 1.513-.43 2.237-.738A3.664 3.664 0 0 0 7.7 19.644a5.575 5.575 0 0 0 1.737 1.512 5.698 5.698 0 0 0 2.188.688 4.63 4.63 0 0 1 .65-1.1 5.654 5.654 0 0 1-1.975-.5c-.617-.284-1.167-.76-1.65-1.244h3.4v-.981H11V16H7.975v-.975h-.95V16H4v2.019H3V19h3.6c-.383.583-.904 1.073-1.563 1.281-.658.209-1.337.363-2.037.463.167.15.313.32.438.512zm1.6-4.181H7.05v.919H5.037v-.919zm2.962 0h2v.919H8v-.919zM10 12.272v.75h1.975V14H10v.997H8.925V14H6v.997H5V14H2.925v-.978H5v-.75h1v.75h2.925v-.75H10zM3 10l3.556-8h1.641l3.556 8H10.11l-.667-1.5H5.308L4.641 10H3zm4.376-6.153L8.778 7H5.975l1.401-3.153z" />
+              </svg>
+              Translate Directions
+            </label>
+            <select id="settings-lang-dir" name="lang-dir">
+              <option value="0">-- Select --</option>
+              <option value="1">Afrikaans</option>
+              <option value="2">Albanian</option>
+              <!-- more languages -->
+              <option value="22" selected>English</option>
+              <!-- more languages -->
+              <option value="104">Zulu</option>
+            </select>
+          </p>
+          <p class="form__field">
+            <label for="settings-translate">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="var(--color-ink-icon)" d="M11.9 22L16.45 10H18.55L23.1 22H21L19.925 18.95H15.075L14 22H11.9ZM4 19L2.6 17.6L7.65 12.55C7.06667 11.9667 6.5375 11.3 6.0625 10.55C5.5875 9.8 5.15 8.95 4.75 8H6.85C7.18333 8.65 7.51667 9.21667 7.85 9.7C8.18333 10.1833 8.58333 10.6667 9.05 11.15C9.6 10.6 10.1708 9.82917 10.7625 8.8375C11.3542 7.84583 11.8 6.9 12.1 6H1V4H8V2H10V4H17V6H14.1C13.75 7.2 13.225 8.43333 12.525 9.7C11.825 10.9667 11.1333 11.9333 10.45 12.6L12.85 15.05L12.1 17.1L9.05 13.975L4 19ZM15.7 17.2H19.3L17.5 12.1L15.7 17.2Z" />
+              </svg>
+              Show Phrase Translate
+            </label>
+            <select id="settings-translate" name="translate">
+              <option value="always">Always</option>
+              <option value="pause" selected>When Video Paused</option>
+              <option value="never">Never Show</option>
+            </select>
+          </p>
+          <p class="form__field">
+            <label for="settings-common">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="var(--color-ink-icon)" d="M8 22.5V16.975C6.31667 16.8417 4.89583 16.1583 3.7375 14.925C2.57917 13.6917 2 12.2167 2 10.5C2 8.68333 2.62917 7.14583 3.8875 5.8875C5.14583 4.62917 6.68333 4 8.5 4H9.175L7.6 2.4L9 1L13 5L9 9L7.6 7.6L9.175 6H8.5C7.25 6 6.1875 6.4375 5.3125 7.3125C4.4375 8.1875 4 9.25 4 10.5C4 11.75 4.4375 12.8125 5.3125 13.6875C6.1875 14.5625 7.25 15 8.5 15H10V17.675L12.675 15H15.5C16.75 15 17.8125 14.5625 18.6875 13.6875C19.5625 12.8125 20 11.75 20 10.5C20 9.25 19.5625 8.1875 18.6875 7.3125C17.8125 6.4375 16.75 6 15.5 6H15V4H15.5C17.3167 4 18.8542 4.62917 20.1125 5.8875C21.3708 7.14583 22 8.68333 22 10.5C22 12.3167 21.3708 13.8542 20.1125 15.1125C18.8542 16.3708 17.3167 17 15.5 17H13.5L8 22.5Z" />
+              </svg>
+              Show Common Phrases
+            </label>
+            <select id="settings-common" name="common">
+              <option value="pause" selected>When Video Paused</option>
+              <option value="never">Never Show</option>
+            </select>
+          </p>
+        </div>
+        <footer class="modal__footer">
+          <button class="btn is-ghost is-submit" type="button">
+            Apply
+          </button>
+          <button class="btn is-ghost" type="reset" data-role="close-modal">
+            Cancel
+          </button>
+        </footer>
+
+      </form>
+    </dialog>
+
     <script src="/src/main.js" type="module"></script>
   </body>
 </html>
