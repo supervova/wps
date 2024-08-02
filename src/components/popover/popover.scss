@@ -112,7 +112,10 @@
 
   bottom: 100%;
   margin-top: 0;
-  margin-bottom: var(--size-2);
+
+  @media only screen and (min-width: 568px) and (min-height: 341px) {
+    margin-bottom: var(--size-2);
+  }
 }
 
 .is-right > .popover__body {
@@ -122,6 +125,11 @@
 
 .has-menu > .popover__body {
   padding-inline: var(--size-2);
+
+  @media only screen and (max-width: 567px) {
+    left: 50%;
+    translate: -50% 0;
+  }
 }
 
 .popover__content {

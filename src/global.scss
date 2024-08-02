@@ -37,6 +37,7 @@
   --color-background-2ry:           hsl(0 0% 91%);
   --color-background-inverse:       hsl(0 0% 24%);
   --color-background-frosted-glass: hsl(0 0% 96% / 0.8);
+  --backdrop-filter-blur-sm:        #{saturate(180%) blur(12px)};
   --backdrop-filter-blur:           #{saturate(180%) blur(20px)};
   --backdrop-filter-blur-lg:        #{saturate(180%) blur(50px)};
   --color-background-scrim:         var(--color-ink-3ry);
@@ -740,7 +741,7 @@ input:not([type='checkbox']):not([type='radio']):not([type='range']) {
 .video-overlay-menu {
   height: 100%;
 
-  @media only screen and (min-width: 768px) and (min-height: 341px) {
+  @media only screen and (min-width: 1360px) and (min-height: 341px) {
     padding-bottom: math.div(120, 16) * 1rem;
   }
 }
@@ -754,13 +755,14 @@ input:not([type='checkbox']):not([type='radio']):not([type='range']) {
   justify-content: center;
 }
 
-.overlay-play-icon .material-symbols-outlined {
-  color: #fff;
-  font-size: math.div(70, 16) * 1rem;
-  opacity: 0.5;
+.overlay-play-icon svg {
+  width: calc(var(--size-line) * 3);
+  height: calc(var(--size-line) * 3);
 
   @media only screen and (min-width: 768px) and (min-height: 341px) {
-    font-size: math.div(175, 16) * 1rem;
+    --color-ink-icon: hsl(0 0% 100% / 0.44);
+    width: calc(var(--size-line) * 7);
+    height: calc(var(--size-line) * 7);
   }
 }
 
